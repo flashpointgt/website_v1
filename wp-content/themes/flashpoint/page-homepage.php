@@ -4,7 +4,7 @@ Template Name: Homepage
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('home'); ?>
 			
 			<div id="content" class="clearfix row-fluid">
 			

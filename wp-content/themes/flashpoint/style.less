@@ -14,31 +14,22 @@ Author: 320press
 Author URI: http://320press.com
 */
 
+/* 
+Constants 
+*/
 
+/* Colors */
+@base: #7bab73;
+@neutral: #efefeb;
+
+
+/* Import LESS */
 @import url("default.less");
+@import url("menu.less");
 @import url("typography.less");
+@import url("custom-responsive.less");
 
-/* Temp theme updates */
-.navbar-inner { 
-	background-color: #7bab73; 
-	background-image: none; 
-	-webkit-box-shadow: none; 
-	-moz-box-shadow: none; 
-	box-shadow: none; border: none; 
-}
 
-.navbar .nav > li > a { 
-	color: #fff; 
-	text-shadow: none; 
-	text-transform: uppercase; 
-}
-
-.navbar .nav > .active > a, 
-.navbar .nav > .active > a:hover, 
-.navbar .nav > .active > a:focus,
-.navbar .nav li.dropdown.open > .dropdown-toggle, 
-.navbar .nav li.dropdown.active > .dropdown-toggle, 
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-	color: #fff;
-	background: darken(#7bab73,5%);
+body.admin-bar .navbar-fixed-top {
+	top:0;
 }
