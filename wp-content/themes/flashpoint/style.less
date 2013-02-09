@@ -1,0 +1,44 @@
+/*
+Theme Name: Flashpoint
+Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
+Version: 0.1.0
+Author: Proper Cursive
+Author URI: http://propercursive.com
+License: GNU General Public License v2.0 & Apache License 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+/*
+Based on WP-Bootsrap by
+Author: 320press
+Author URI: http://320press.com
+*/
+
+
+@import url("default.less");
+@import url("typography.less");
+
+/* Temp theme updates */
+.navbar-inner { 
+	background-color: #7bab73; 
+	background-image: none; 
+	-webkit-box-shadow: none; 
+	-moz-box-shadow: none; 
+	box-shadow: none; border: none; 
+}
+
+.navbar .nav > li > a { 
+	color: #fff; 
+	text-shadow: none; 
+	text-transform: uppercase; 
+}
+
+.navbar .nav > .active > a, 
+.navbar .nav > .active > a:hover, 
+.navbar .nav > .active > a:focus,
+.navbar .nav li.dropdown.open > .dropdown-toggle, 
+.navbar .nav li.dropdown.active > .dropdown-toggle, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+	color: #fff;
+	background: darken(#7bab73,5%);
+}
