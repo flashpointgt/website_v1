@@ -11,7 +11,7 @@
 body { 
 	background: @neutral; 
 }
-.header {
+.header-image {
   margin-bottom: 2em;
   border-bottom: 8px solid darken(@neutral,10%);
 }
@@ -36,7 +36,7 @@ body {
     margin-top: -28px;
   }
   */
-  .header {
+  .header-image {
     display: none;
   }
 }
@@ -133,7 +133,6 @@ body {
 	.main { 
 		background: #fff;
 	}
-  
   /* Main Menu */
   .navbar .nav > li { 
     padding: 0 12px
@@ -142,23 +141,33 @@ body {
     a { 
         text-indent:10px; 
         background: url('images/about-icon.png') no-repeat 0 48%;
-          &:active,
-          &:hover {
-            background: url('images/about-icon-hover.png') no-repeat 0 48%;
-          }
       }
   }
   .mentors {
+    a {
+      text-indent: 10px; 
+      background: url('images/mentor-icon.png') no-repeat 0 48%;
+    }
+  }
+  .teams {
     a { 
         text-indent:10px; 
-        background: url('images/mentor-icon.png') no-repeat 0 48%;
-          &:active,
-          &:hover {
-            background: url('images/mentor-icon-hover.png') no-repeat 0 48%;
-          }
+        background: url('images/team-icon.png') no-repeat 0 48%;
+      }
+  }
+  .blog {
+    a { 
+        text-indent:10px; 
+        background: url('images/blog-icon.png') no-repeat 0 48%;
       }
   }
   .logo img { 
     margin: 0 0 3em 0; 
   }
+  .header-image {
+    display: block;
+      img { 
+        width: 100%;
+    }
+  } 
 }

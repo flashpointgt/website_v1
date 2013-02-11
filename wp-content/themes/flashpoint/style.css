@@ -481,7 +481,7 @@ blockquote.pull-left {
   text-transform: uppercase;
 }
 .navbar .nav > li > a:hover {
-  color: #375332;
+  color: #fff;
 }
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
@@ -489,9 +489,12 @@ blockquote.pull-left {
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  color: #375332;
-  background-color: #7bab73;
+  color: #fff;
   box-shadow: none;
+}
+.navbar .nav > li:hover,
+.navbar .nav > li.current-menu-item {
+  background-color: #619358;
 }
 .dropdown-menu a {
   display: block;
@@ -593,7 +596,7 @@ a:hover {
 body {
   background: #efefeb;
 }
-.header {
+.header-image {
   margin-bottom: 2em;
   border-bottom: 8px solid #d8d8cf;
 }
@@ -618,7 +621,7 @@ body {
       margin-top: -28px;
     }
     */
-  .header {
+  .header-image {
     display: none;
   }
 }
@@ -716,20 +719,26 @@ body {
     text-indent: 10px;
     background: url('images/about-icon.png') no-repeat 0 48%;
   }
-  .about a:active,
-  .about a:hover {
-    background: url('images/about-icon-hover.png') no-repeat 0 48%;
-  }
   .mentors a {
     text-indent: 10px;
     background: url('images/mentor-icon.png') no-repeat 0 48%;
   }
-  .mentors a:active,
-  .mentors a:hover {
-    background: url('images/mentor-icon-hover.png') no-repeat 0 48%;
+  .teams a {
+    text-indent: 10px;
+    background: url('images/team-icon.png') no-repeat 0 48%;
+  }
+  .blog a {
+    text-indent: 10px;
+    background: url('images/blog-icon.png') no-repeat 0 48%;
   }
   .logo img {
     margin: 0 0 3em 0;
+  }
+  .header-image {
+    display: block;
+  }
+  .header-image img {
+    width: 100%;
   }
 }
 /* body.admin-bar .navbar-fixed-top {

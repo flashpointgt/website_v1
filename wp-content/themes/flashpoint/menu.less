@@ -10,7 +10,7 @@
 	text-shadow: none; 
 	text-transform: uppercase;
     &:hover {
-      color: darken(@base,30%);
+      color: #fff;
     } 
 }
 .navbar .nav > .active > a, 
@@ -19,9 +19,12 @@
 .navbar .nav li.dropdown.open > .dropdown-toggle, 
 .navbar .nav li.dropdown.active > .dropdown-toggle, 
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-	color: darken(@base,30%);
-	background-color: @base;
+	color: #fff;
   box-shadow: none;
+}
+.navbar .nav > li:hover,
+.navbar .nav > li.current-menu-item { 
+  background-color: darken(@base,10%);
 }
 .dropdown-menu a {
   display: block;

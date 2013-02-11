@@ -104,6 +104,15 @@
 								
 								<div class="nav-collapse">
 									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+									<ul class="nav pull-right">
+						              <li><a href="apply">Apply</a></li>
+						              <?php if ( is_user_logged_in() ) {
+					    				echo '<li><a href="'.wp_logout_url( get_permalink() ).'" title="Logout">Logout</a></li>';
+										} else {
+					    				echo '<li><a href="'.wp_login_url( get_permalink() ).'" title="Login">Login</a></li>';
+										}
+									  ?>
+            						</ul>
 								</div>
 								
 							</nav>
@@ -125,7 +134,7 @@
 		<div class="container-fluid logo">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" /></a>
 		</div>
-		<div class="header">
+		<div class="header-image">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/header.jpg" alt="" />
 		</div>
 		<div class="container-fluid main">		

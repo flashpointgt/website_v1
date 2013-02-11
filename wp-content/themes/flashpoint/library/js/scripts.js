@@ -99,5 +99,7 @@ $(document).ready(function() {
 	$('.alert-message').alert();
 	
 	$('.dropdown-toggle').dropdown();
- 
+
+	// $("#header-image").backstretch("http://localhost:8888/flashpoint/wp-content/themes/flashpoint/images/header.jpg");
+ 	
 }); /* end of as page load scripts */
