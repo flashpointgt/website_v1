@@ -99,6 +99,13 @@ $(document).ready(function() {
 	$('.alert-message').alert();
 	
 	$('.dropdown-toggle').dropdown();
+	$('body').noisy({
+				intensity: 0.5,
+				size: 200,
+				opacity: 0.05,
+				fallback: '../images/fallback.png',
+				monochrome: true
+			}).css('background-color', '#EFEFEB');
 
 	// $("#header-image").backstretch("http://localhost:8888/flashpoint/wp-content/themes/flashpoint/images/header.jpg");
  	

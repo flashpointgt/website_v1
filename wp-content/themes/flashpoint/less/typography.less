@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-reg-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-bold-webfont.woff');
+    font-weight: bold;
+    font-style: normal;
+}
+* { 
+	color: @grey;
+	font-family: @proxima;
+}
+a {
+	color: @base;
+		&:hover {
+			color: darken(@base,10%);
+			text-decoration: none;
+		}
+}
+.page-header {
+	border: none;
+}

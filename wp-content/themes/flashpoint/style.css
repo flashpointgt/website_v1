@@ -16,6 +16,7 @@ Author URI: http://320press.com
 Constants 
 */
 /* Colors */
+/* Typography*/
 /* Import LESS */
 /* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* For modern browsers */
@@ -492,10 +493,6 @@ blockquote.pull-left {
   color: #fff;
   box-shadow: none;
 }
-.navbar .nav > li:hover,
-.navbar .nav > li.current-menu-item {
-  background-color: #619358;
-}
 .dropdown-menu a {
   display: block;
   padding: 3px 20px;
@@ -577,12 +574,44 @@ blockquote.pull-left {
   border-top-color: #375332;
   border-bottom-color: #375332;
 }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proximanova-reg-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proximanova-bold-webfont.woff');
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  color: #4a4a4a;
+  font-family: 'Proxima Nova', sans-serif;
+}
 a {
   color: #7bab73;
 }
 a:hover {
   color: #619358;
   text-decoration: none;
+}
+.page-header {
+  border: none;
+}
+.widgettitle {
+  text-transform: uppercase;
+  border-bottom: 1px solid #d5d5d5;
+  padding: 0 0 .5em 0;
+}
+.widget ul {
+  list-style: none;
+  margin: 0;
+}
+.widget ul li {
+  border-bottom: 1px solid #d5d5d5;
+  padding: .5em 0;
 }
 /*!
  * Bootstrap Responsive v2.1.1
@@ -710,24 +739,31 @@ body {
 @media (min-width: 980px) {
   .main {
     background: #fff;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 2px #d5d5d5;
   }
   /* Main Menu */
   .navbar .nav > li {
     padding: 0 12px;
   }
-  .about a {
+  .navbar .nav > li:hover,
+  .navbar .nav > li.current-menu-item {
+    background-color: #619358;
+  }
+  li.about a {
     text-indent: 10px;
     background: url('images/about-icon.png') no-repeat 0 48%;
   }
-  .mentors a {
+  li.mentors a {
     text-indent: 10px;
     background: url('images/mentor-icon.png') no-repeat 0 48%;
   }
-  .teams a {
+  li.teams a {
     text-indent: 10px;
     background: url('images/team-icon.png') no-repeat 0 48%;
   }
-  .blog a {
+  li.blog a {
     text-indent: 10px;
     background: url('images/blog-icon.png') no-repeat 0 48%;
   }
@@ -741,6 +777,3 @@ body {
     width: 100%;
   }
 }
-/* body.admin-bar .navbar-fixed-top {
-	top:0;
-} */
