@@ -19,10 +19,6 @@ body {
   
 }
 @media (min-width: 768px) and (max-width: 979px) {
-	/* #inner-header {
-    margin-top: -28px;
-  }
-  */
   .main { 
 		background: #fff;
 	}
@@ -31,11 +27,6 @@ body {
 	}
 }
 @media (max-width: 767px) {
-  /*
-  #inner-header {
-    margin-top: -28px;
-  }
-  */
   .header-image {
     display: none;
   }
@@ -141,9 +132,15 @@ body {
     padding: 0 12px
   }
   .navbar .nav > li:hover,
-  .navbar .nav > li.current-menu-item { 
+  .navbar .nav > li.current-menu-item,
+  li.dropdown.open.active > a:hover { 
     background-color: darken(@base,10%);
   }
+  .navbar .nav > li:active,
+  .navbar .nav > li.current-menu-item,
+  li.dropdown.open.active > a:active {
+    .inner-shadow(0, 2px, 4px, 0.15);
+  } 
   li.about {
     a { 
         text-indent:10px; 
@@ -177,4 +174,7 @@ body {
         width: 100%;
     }
   } 
+  .mentor-info {  
+    padding-top: 1.8em;
+  }
 }

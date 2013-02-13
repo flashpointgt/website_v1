@@ -41,6 +41,8 @@ add_image_size( 'wpbs-featured-home', 970, 311, true);
 add_image_size( 'wpbs-featured-carousel', 970, 400, true);
 add_image_size( 'bones-thumb-600', 600, 150, false );
 add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'mentors-thumb', 140, 160, true ); 
+add_image_size( 'staff-thumb', 180, 220, true ); 
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you

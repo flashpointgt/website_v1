@@ -12,12 +12,16 @@ Based on WP-Bootsrap by
 Author: 320press
 Author URI: http://320press.com
 */
-/* 
-Constants 
-*/
+/* LESS Elements */
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
 /* Colors */
 /* Typography*/
-/* Import LESS */
+/* Import Custom LESS */
 /* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* For modern browsers */
 .clearfix:before,
@@ -476,6 +480,9 @@ blockquote.pull-left {
   box-shadow: none;
   border: none;
 }
+.navbar li {
+  font-size: 14px;
+}
 .navbar .nav > li > a {
   color: #fff;
   text-shadow: none;
@@ -576,19 +583,43 @@ blockquote.pull-left {
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/proximanova-reg-webfont.woff');
+  src: url('./fonts/proximanova-reg-webfont.woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/proximanova-bold-webfont.woff');
+  src: url('./fonts/proximanova-bold-webfont.woff');
   font-weight: bold;
   font-style: normal;
 }
 * {
   color: #4a4a4a;
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+}
+h1 {
+  font-size: 30px;
+  line-height: 40px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 40px;
+}
+h3 {
+  font-size: 18px;
+  line-height: 40px;
+}
+h4 {
+  font-size: 14px;
+  line-height: 20px;
+}
+h5 {
+  font-size: 12px;
+  line-height: 20px;
+}
+h6 {
+  font-size: 12px;
+  line-height: 20px;
 }
 a {
   color: #7bab73;
@@ -597,21 +628,245 @@ a:hover {
   color: #619358;
   text-decoration: none;
 }
+p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin: 1.8em 0;
+}
+p.attribution {
+  font-size: 1em;
+}
+ul,
+li {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+#sidebar1 ul,
+li {
+  font-size: 1em;
+  line-height: 1.4em;
+}
 .page-header {
   border: none;
 }
+.page-title {
+  text-transform: uppercase;
+  border-bottom: 1px solid #cacaca;
+}
+/* Breadcrumbs */.breadcrumbs {
+  padding: 0 1em 2em 1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #cacaca;
+}
+.breadcrumbs a,
+.breadcrumbs span {
+  font-weight: normal;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 4px 36px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
+  float: left;
+  margin-right: 0.5em;
+}
+.breadcrumbs span {
+  background: #619358;
+}
+.breadcrumbs a {
+  background: #7bab73;
+}
+.breadcrumbs a:hover {
+  color: #ffffff;
+  background: #619358;
+}
+.breadcrumbs a:active,
+.breadcrumbs a.active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+/* Mentors Pages */
+.mentor-info h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  font-weight: normal;
+}
+.location {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+/* 
+This file is for adding bootstrap styles to .button class. 
+Wordpress uses .button while Bootstrap uses .btn 
+*/
+.button {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  padding: 4px 14px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  *line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e6e6e6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-bottom-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.button:hover,
+.button:active,
+.button.active,
+.button.disabled,
+.button[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+.button:active,
+.button.active {
+  background-color: #cccccc \9;
+}
+.button:first-child {
+  *margin-left: 0;
+}
+.button:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+.button:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.button.active,
+.button:active {
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.button.disabled,
+.button[disabled] {
+  cursor: default;
+  background-color: #e6e6e6;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.login-button {
+  margin-bottom: 15px;
+}
 .widgettitle {
   text-transform: uppercase;
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 1px solid #cacaca;
   padding: 0 0 .5em 0;
+}
+.widget {
+  margin-bottom: 2.5em;
 }
 .widget ul {
   list-style: none;
   margin: 0;
 }
 .widget ul li {
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 1px solid #cacaca;
   padding: .5em 0;
+}
+/* Mentors List */
+#mentors-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#mentors-list li {
+  float: left;
+  margin: 0 0 15px 0;
+  padding-bottom: 8px;
+  position: relative;
+}
+#mentors-list a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.mentor-details {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  text-shadow: 0 0 0;
+  font-weight: normal;
+  z-index: 999;
+}
+.mentor-details .mentor-name {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background: #7bab73;
+  padding: 5px 10px 5px 5px;
+}
+.mentor-details .mentor-title {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background: #22331f;
+  padding: 5px 10px 5px 5px;
+  margin-top: 2px;
+}
+/* Staff List */
+#staff-list {
+  list-style: none;
+}
+#staff-list img {
+  max-width: 220px !important;
+  float: left;
+  margin: 0 2em 0 0 ;
 }
 /*!
  * Bootstrap Responsive v2.1.1
@@ -633,10 +888,6 @@ body {
   
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  /* #inner-header {
-      margin-top: -28px;
-    }
-    */
   .main {
     background: #fff;
   }
@@ -645,11 +896,6 @@ body {
   }
 }
 @media (max-width: 767px) {
-  /*
-    #inner-header {
-      margin-top: -28px;
-    }
-    */
   .header-image {
     display: none;
   }
@@ -748,8 +994,16 @@ body {
     padding: 0 12px;
   }
   .navbar .nav > li:hover,
-  .navbar .nav > li.current-menu-item {
+  .navbar .nav > li.current-menu-item,
+  li.dropdown.open.active > a:hover {
     background-color: #619358;
+  }
+  .navbar .nav > li:active,
+  .navbar .nav > li.current-menu-item,
+  li.dropdown.open.active > a:active {
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
   }
   li.about a {
     text-indent: 10px;
@@ -775,5 +1029,8 @@ body {
   }
   .header-image img {
     width: 100%;
+  }
+  .mentor-info {
+    padding-top: 1.8em;
   }
 }

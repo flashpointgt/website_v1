@@ -109,7 +109,7 @@ if(!function_exists('s8_clr_get_form')):
                         <?php //do_action('login_form'); ?>
                         <input type="checkbox" id="remember-me" name="remember" value="forever" />
                         <label for="remember-me"><? _e('Remember me'); ?></label><br />
-                        <input type="submit" name="s8-login" value="<?php _e('Login'); ?>" class="login-button" />
+                        <input type="submit" name="s8-login" value="<?php _e('Login'); ?>" class="login-button btn" />
                         <?php if($args['forgot'])
                             echo '<br/>'.s8_get_forgot_password_link();
                         if($args['register'] && get_option('users_can_register'))

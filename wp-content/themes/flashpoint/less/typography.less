@@ -1,27 +1,114 @@
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('../fonts/proximanova-reg-webfont.woff');
+    src: url('./fonts/proximanova-reg-webfont.woff');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('../fonts/proximanova-bold-webfont.woff');
+    src: url('./fonts/proximanova-bold-webfont.woff');
     font-weight: bold;
     font-style: normal;
 }
 * { 
 	color: @grey;
-	font-family: @proxima;
+	font-family: @sans;
+}
+h1 {
+  font-size: 30px;
+  line-height: 40px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 40px;
+}
+h3 {
+  font-size: 18px;
+  line-height: 40px;
+}
+h4 {
+  font-size: 14px;
+  line-height: 20px;
+}
+h5 {
+  font-size: 12px;
+  line-height: 20px;
+}
+h6 {
+  font-size: 12px;
+  line-height: 20px;
 }
 a {
 	color: @base;
-		&:hover {
-			color: darken(@base,10%);
-			text-decoration: none;
-		}
+	&:hover {
+		color: darken(@base,10%);
+		text-decoration: none;
+	}
+}
+p { 
+  font-size: 1.2em; 
+  line-height: 1.6em; 
+  margin: 1.8em 0; 
+  &.attribution { 
+    font-size: 1em;
+  }
+}
+ul, li {
+  font-size: 1.2em; 
+  line-height: 1.6em; 
+}
+#sidebar1 ul, li {
+  font-size: 1em; 
+  line-height: 1.4em; 
 }
 .page-header {
 	border: none;
+}
+.page-title {
+	text-transform: uppercase;
+  border-bottom: 1px solid lighten(@grey, 50%);
+}
+
+/* Breadcrumbs */ 
+.breadcrumbs { 
+  padding: 0 1em 2em 1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid lighten(@grey, 50%);
+  a, 
+  span {
+    font-weight: normal;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 4px 36px;
+    .rounded(32px);
+    float: left;
+    margin-right: 0.5em;
+  }
+  span {
+    background: darken(@base,10%);
+  }
+  a {
+    background: @base;
+  }
+  a:hover {
+    color: #ffffff;
+    background: darken(@base,10%);
+  }
+  a:active,
+  a.active {
+    .inner-shadow(0, 2px, 4px, 0.15);
+  }
+}
+
+/* Mentors Pages */
+.mentor-info h1 { 
+  font-size: 16px; 
+  text-transform: uppercase; 
+  margin-bottom: 2px; 
+  font-weight: normal; 
+}
+.location { 
+  font-size: 16px; 
+  text-transform: uppercase; 
+  font-weight: normal; 
 }

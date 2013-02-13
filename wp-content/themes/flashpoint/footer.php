@@ -17,7 +17,7 @@
 					
 					<!-- <p class="pull-right"><a href="http://320press.com" id="credit320" title="By the dudes of 320press">320press</a></p> -->
 			
-					<p class="attribution">&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
+					<p class="attribution">&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>&nbsp;<a href="about/contact">Contact Us</a></p>
 				
 				</div> <!-- end #inner-footer -->
 				

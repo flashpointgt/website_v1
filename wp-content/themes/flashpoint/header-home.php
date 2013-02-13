@@ -105,7 +105,7 @@
 								<div class="nav-collapse">
 									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 									<ul class="nav pull-right">
-						              <li><a href="apply">Apply</a></li>
+						              <li><a href="<?php echo home_url(); ?>/apply">Apply</a></li>
 						              <?php if ( is_user_logged_in() ) {
 					    				echo '<li><a href="'.wp_logout_url( get_permalink() ).'" title="Logout">Logout</a></li>';
 										} else {
