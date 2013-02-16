@@ -12,6 +12,15 @@ Based on WP-Bootsrap by
 Author: 320press
 Author URI: http://320press.com
 */
+/* 
+Please do not edit style.css directly! 
+LESS files can be found in the 'flashpoint/less' directory & can then be compiled to CSS.
+
+http://lesscss.org/
+http://incident57.com/codekit/
+
+If you switch to plain css, please remove 'flashpoint/less' folder or styles may be overwritten.
+*/
 /* LESS Elements */
 /*---------------------------------------------------
     LESS Elements 0.9
@@ -134,10 +143,12 @@ div[id*='attachment_'] {
 #main .hero-unit img {
   margin-bottom: 1em;
 }
-#main article img {
-  height: auto;
-  max-width: 100%;
+/* 
+#main article img{
+	height: auto;
+	max-width: 100%;
 }
+*/
 img.alignleft {
   margin-right: 10px;
   float: left;
@@ -475,9 +486,6 @@ blockquote.pull-left {
 .navbar-inner {
   background-color: #7bab73;
   background-image: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   border: none;
 }
 .navbar li {
@@ -498,7 +506,6 @@ blockquote.pull-left {
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   color: #fff;
-  box-shadow: none;
 }
 .dropdown-menu a {
   display: block;
@@ -544,9 +551,6 @@ blockquote.pull-left {
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
 }
 .navbar .btn-navbar:hover,
 .navbar .btn-navbar:active,
@@ -566,9 +570,6 @@ blockquote.pull-left {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: #fff;
@@ -658,27 +659,49 @@ li {
   text-transform: uppercase;
   border-bottom: 1px solid #cacaca;
 }
-.breadcrumbs a,
-.breadcrumbs span {
+.breadcrumbs ul {
+  list-style: none;
+  margin: 0;
+}
+.breadcrumbs ul li {
   font-weight: normal;
   font-size: 14px;
-  color: #ffffff;
-  padding: 4px 36px;
+  display: block;
+}
+.breadcrumbs a,
+.breadcrumbs span {
+  color: #fff;
+  padding: 6px 36px;
   -webkit-border-radius: 32px;
   -moz-border-radius: 32px;
   border-radius: 32px;
   float: left;
   margin-right: 0.5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .breadcrumbs span {
-  background: #619358;
+  background: #4c7345;
 }
 .breadcrumbs a {
   background: #7bab73;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7bab73), color-stop(1, #8ab583));
+  background: -ms-linear-gradient(bottom, #7bab73, #8ab583);
+  background: -moz-linear-gradient(center bottom, #7bab73 0%, #8ab583 100%);
+  background: -o-linear-gradient(#8ab583, #7bab73);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8ab583', endColorstr='#7bab73', GradientType=0);
+  border: 1px solid #7bab73;
 }
 .breadcrumbs a:hover {
   color: #ffffff;
   background: #619358;
+  background: #6ca163;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6ca163), color-stop(1, #7bab73));
+  background: -ms-linear-gradient(bottom, #6ca163, #7bab73);
+  background: -moz-linear-gradient(center bottom, #6ca163 0%, #7bab73 100%);
+  background: -o-linear-gradient(#7bab73, #6ca163);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7bab73', endColorstr='#6ca163', GradientType=0);
 }
 .breadcrumbs a:active,
 .breadcrumbs a.active {
@@ -833,6 +856,15 @@ Wordpress uses .button while Bootstrap uses .btn
   display: block;
   text-decoration: none;
   position: relative;
+  padding: 0 4px 0 4px;
+  margin: 0 20px;
+}
+#mentors-list img {
+  width: 165px;
+  height: 200px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .mentor-details {
   position: absolute;
@@ -850,7 +882,7 @@ Wordpress uses .button while Bootstrap uses .btn
   background: #7bab73;
   padding: 5px 10px 5px 5px;
 }
-.mentor-details .mentor-title {
+.mentor-details .mentor-company {
   display: inline-block;
   font-size: 14px;
   line-height: 16px;
@@ -858,6 +890,11 @@ Wordpress uses .button while Bootstrap uses .btn
   background: #22331f;
   padding: 5px 10px 5px 5px;
   margin-top: 2px;
+}
+.mentor-info img {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 /* Staff List */
 #staff-list {
@@ -867,6 +904,21 @@ Wordpress uses .button while Bootstrap uses .btn
   max-width: 220px !important;
   float: left;
   margin: 0 2em 0 0 ;
+  border: 1px solid #cacaca;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+/* Teams List (Generic) */
+ul.grid-list {
+  list-style: none;
+  position: relative;
+  overflow: auto;
+}
+ul.grid-list li a {
+  padding: 1em 0;
+  margin: 1em;
+  float: left;
 }
 /*!
  * Bootstrap Responsive v2.1.1
@@ -987,9 +1039,16 @@ body {
     background: #fff;
     padding: 20px 40px;
     margin-bottom: 40px;
-    box-shadow: 0 1px 2px #d5d5d5;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   }
   /* Main Menu */
+  .navbar {
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
   .navbar .nav > li {
     padding: 0 12px;
   }

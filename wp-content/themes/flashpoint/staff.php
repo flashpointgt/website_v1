@@ -32,7 +32,7 @@ Template Name: Staff Page
                   $loop = new WP_Query( $args );
                   while ( $loop->have_posts() ) : $loop->the_post();
                     echo '<div class="entry-content"><div class="span12">';
-                    the_post_thumbnail('staff-thumb'); 
+                    the_post_thumbnail('profile-thumb'); 
                     echo '<h2>';
                     the_title();
                     echo '</h2>';

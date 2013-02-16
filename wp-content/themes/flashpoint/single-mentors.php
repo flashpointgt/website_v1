@@ -10,16 +10,18 @@
 						
 						<header>
 							<div class="span12 breadcrumbs">
-								<a href="./mentors">Mentors</a> 
-								<span><?php the_title(); ?></span>
+								<ul>
+									<li><a href="<?php get_home_url(); ?>/mentors">Mentors</a></li>
+									<li><span><?php the_title(); ?></span></li>
+								</ul>
 							</div>							
 						</header> <!-- end article header -->
 						
 						<div class="mentor-info span3">
-							<div class="portrait"><?php the_post_thumbnail( 'mentors-thumb' ); ?></div>
+							<div><?php the_post_thumbnail( 'profile-thumb' ); ?></div>
 							<h1><?php the_title(); ?></h1>
-							<span class="location"><?php print_custom_field('location'); ?></span><br>
-							<span class="location"><?php print_custom_field('company'); ?></span>
+							<span class="location"><?php print_custom_field('company'); ?></span><br>
+							<span class="location"><?php print_custom_field('location'); ?></span>	
 						</div>
 						
 						<section class="post_content clearfix span8" itemprop="articleBody">

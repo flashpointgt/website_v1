@@ -1,0 +1,78 @@
+/* Mentors List */
+#mentors-list { 
+	list-style: none;
+	margin: 0; 
+	padding: 0;
+	li {
+		float: left;
+		margin: 0 0 15px 0;
+		padding-bottom: 8px;
+		position: relative;
+	} 
+	a {
+		display: block;
+		text-decoration: none;
+		position: relative;
+		padding: 0 4px 0 4px; 
+		margin: 0 20px;
+	}	
+	img {
+		width: 165px; 
+		height: 200px;
+		.drop-shadow(0, 1px, 2px, 0.2); 
+	}
+} 
+.mentor-details {
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+	text-shadow: 0 0 0;
+	font-weight: normal;
+	z-index: 999;
+}
+.mentor-details .mentor-name {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 16px;
+	color: #fff;
+	background: @base;
+	padding: 5px 10px 5px 5px;
+}
+.mentor-details .mentor-company {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 16px;
+	color: #fff;
+	background: darken(@base,40%);
+	padding: 5px 10px 5px 5px;
+	margin-top: 2px;
+}
+.mentor-info {
+	img {
+		.drop-shadow(0, 1px, 2px, 0.2); 
+	}
+}
+
+/* Staff List */
+#staff-list { 
+	list-style: none; 
+	img {
+		max-width: 220px !important; 
+		float: left; 
+		margin: 0 2em 0 0 ;
+		border: 1px solid lighten(@grey, 50%);
+		.drop-shadow(0, 1px, 2px, 0.2); 
+	}
+}
+
+/* Teams List (Generic) */
+ul.grid-list {
+	list-style: none;
+	position:relative;
+    overflow:auto;
+    li a {
+    	padding: 1em 0; 
+    	margin: 1em;  
+    	float: left;
+    }
+}

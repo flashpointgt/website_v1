@@ -10,7 +10,7 @@
 						
 						<header>
 							<div class="span12 breadcrumbs">
-								<a href="./staff">Staff</a> 
+								<a href="<?php get_home_url(); ?>/staff">Staff</a> 
 								<span><?php the_title(); ?></span>
 							</div>							
 						</header> <!-- end article header -->

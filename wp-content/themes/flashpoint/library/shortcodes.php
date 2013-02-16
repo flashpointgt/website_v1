@@ -129,6 +129,4 @@ function blockquotes( $atts, $content = null ) {
 add_shortcode('blockquote', 'blockquotes'); 
  
 
-
-
 ?>

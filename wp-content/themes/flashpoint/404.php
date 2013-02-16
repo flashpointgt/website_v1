@@ -10,7 +10,7 @@
 
 							<div class="hero-unit">
 							
-								<h1>Epic 404 - Article Not Found</h1>
+								<h1>Page Not Found</h1>
 								<p>This is embarassing. We can't find what you were looking for.</p>
 															
 							</div>

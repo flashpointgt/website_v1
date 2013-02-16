@@ -74,25 +74,38 @@ ul, li {
   padding: 0 1em 2em 1em;
   text-transform: uppercase;
   border-bottom: 1px solid lighten(@grey, 50%);
+  ul { 
+    list-style: none; 
+    margin: 0; 
+    li {
+      font-weight: normal;
+      font-size: 14px;
+      display: block;      
+    }
+  }
+
   a, 
   span {
-    font-weight: normal;
-    font-size: 14px;
-    color: #ffffff;
-    padding: 4px 36px;
+    color: #fff;
+    padding: 6px 36px;
     .rounded(32px);
     float: left;
     margin-right: 0.5em;
+    .drop-shadow(0, 1px, 2px, 0.2); 
   }
   span {
-    background: darken(@base,10%);
+    background: darken(@base,20%);;
   }
   a {
     background: @base;
+    .gradient(@base, @base, lighten(@base,5%)); 
+    border: 1px solid @base;
+
   }
   a:hover {
     color: #ffffff;
     background: darken(@base,10%);
+    .gradient(darken(@base,5%), darken(@base,5%), @base); 
   }
   a:active,
   a.active {

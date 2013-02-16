@@ -11,7 +11,7 @@
 						<header>
 							<div class="row">
 								<div class="span12 breadcrumbs">
-									<a href="./teams">Teams</a> 
+									<a href="<?php get_home_url(); ?>/teams">Teams</a> 
 									<span><?php the_title(); ?></span>
 								</div>
 							</div>
@@ -21,7 +21,7 @@
 							
 							<div class="page-header">
 								<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-								<?php print_custom_field('location'); ?>
+								<a href="<?php print_custom_field('website'); ?>" target="_blank" /><?php print_custom_field('website'); ?></a>
 							</div>
 							
 							

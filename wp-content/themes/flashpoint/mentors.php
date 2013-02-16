@@ -33,14 +33,14 @@ Template Name: Mentors Page
                   echo '<li class="span3"><a href="';
                   the_permalink();
                   echo '">';
-                  the_post_thumbnail('mentors-thumb');
+                  the_post_thumbnail('profile-thumb');
                   echo '<span class="mentor-details"><span class="mentor-name">';
                   the_title();
-                  echo '</span><div><span class="mentor-title">';
+                  echo '</span><div><span class="mentor-company">';
                   print_custom_field('company');
                   echo '</span></span></div></a></li>';
                 endwhile;
-              ?>     
+                ?>     
               </ul> 
 
 
