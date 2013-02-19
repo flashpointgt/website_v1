@@ -1,4 +1,4 @@
-/* Mentors List */
+/* Mentors */
 #mentors-list { 
 	list-style: none;
 	margin: 0; 
@@ -51,9 +51,14 @@
 	img {
 		.drop-shadow(0, 1px, 2px, 0.2); 
 	}
+	p {
+		margin: 0; 
+		font-size: 1em;
+		text-transform: uppercase; 
+	}
 }
 
-/* Staff List */
+/* Staff */
 #staff-list { 
 	list-style: none; 
 	img {
@@ -65,14 +70,57 @@
 	}
 }
 
-/* Teams List (Generic) */
+/* Teams */
 ul.grid-list {
 	list-style: none;
 	position:relative;
-    overflow:auto;
-    li a {
+  overflow:auto;
+  li {
+  	display: inline-block; 
+  	vertical-align: top; 
+  	max-width: 200px; 
+  	height: 150px;
+    a {
     	padding: 1em 0; 
     	margin: 1em;  
     	float: left;
-    }
+    	}
+	}
+}
+.teams {
+	header {
+		margin-bottom: 2em;
+	} 
+}
+.team-info {
+	p {
+		margin: 0; 
+		font-size: 1em;
+	}
+}
+
+.twitter {
+	img {
+		width: 50px; 
+		margin-left: -6px
+	}	
+}
+
+.team-info { 
+	img { 
+		max-width: 200px; 
+		margin-bottom: 20px;
+	}
+	ul {
+		list-style: none; 
+		font-size: 1em; 
+		margin: 0;
+		/* li {
+			&.twitter a {  
+				background: url('http://flashpoint.ei2.org/wp-content/themes/flashpoint/images/twitter-50px.png') no-repeat -10px;
+  			padding: 1.5em;
+				text-indent: 20px; 
+			}
+		} */
+	}
 }

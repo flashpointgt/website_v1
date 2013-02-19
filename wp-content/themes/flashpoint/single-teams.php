@@ -14,24 +14,21 @@
 									<a href="<?php get_home_url(); ?>/teams">Teams</a> 
 									<span><?php the_title(); ?></span>
 								</div>
-							</div>
-							
-							
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
-							
-							<div class="page-header">
-								<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-								<a href="<?php print_custom_field('website'); ?>" target="_blank" /><?php print_custom_field('website'); ?></a>
-							</div>
-							
-							
-
-						
+							</div>						
 						</header> <!-- end article header -->
-					
-						<section class="post_content clearfix" itemprop="articleBody">
+						
+						<aside class="team-info span3">
+							<a href="<?php print_custom_field('website'); ?>" target="_blank" /><?php the_post_thumbnail( 'wpbs-featured' ); ?></a>
+							<p><a href="http://<?php print_custom_field('website'); ?>" target="_blank" /><?php print_custom_field('website'); ?></a></p>
+							<p><?php print_custom_field('location'); ?></p>
+							<p><a href="https://twitter.com/<?php print_custom_field('twitter'); ?>" target="_blank" /><?php print_custom_field('twitter'); ?></a></p>
+							<?php wp_link_pages(); ?>
+							</ul>	
+						</aside>
+						
+						<section class="post_content clearfix span8" itemprop="articleBody">
 							<?php the_content(); ?>
-							
+
 							<?php wp_link_pages(); ?>
 					
 						</section> <!-- end article section -->

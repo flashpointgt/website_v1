@@ -1,20 +1,15 @@
-/*!
- * Bootstrap Responsive v2.1.1
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
-
 body { 
-	background: @neutral; 
+	background: #fff; 
 }
 .header-image {
   margin-bottom: 2em;
   border-bottom: 8px solid darken(@neutral,10%);
 }
+.mobile-icons,
+.widget_FacebookLikeBox {
+  display: none;
+}
+
 @media (min-width: 1200px) {
   
 }
@@ -27,6 +22,11 @@ body {
 	}
 }
 @media (max-width: 767px) {
+  .main { 
+    background: #fff;
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
   .header-image {
     display: none;
   }
@@ -35,7 +35,21 @@ body {
 
 }
 @media (max-width: 979px) {
-	.nav-collapse .nav > li > a,
+  .mobile-icons {
+    display: block;
+    padding: 8px;
+    a { 
+      display: block;
+      float: left;
+      margin: 2px 15px; 
+      &:hover {
+        cursor: pointer;
+        // background-color: darken(@base,20%); 
+      }
+    }
+
+  }
+  .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     color: #eee;
   }
@@ -121,7 +135,10 @@ body {
   
 }
 @media (min-width: 980px) {
-	.main { 
+	#main { 
+    min-height: 600px;
+  }
+  .main { 
 		background: #fff;
     padding: 20px 40px; 
     margin-bottom: 40px;
@@ -179,5 +196,13 @@ body {
   } 
   .mentor-info {  
     padding-top: 1.8em;
+  }
+  .pagination { 
+    margin-bottom: 4em;
+  }
+  @media (min-width: 1024px) {
+    .widget_FacebookLikeBox {
+      display: block;
+    } 
   }
 }

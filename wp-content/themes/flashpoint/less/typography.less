@@ -17,6 +17,11 @@
 h1 {
   font-size: 30px;
   line-height: 40px;
+  &.post-title { 
+    line-height: 36px; 
+    margin: 0; 
+    padding: 0; 
+  }
 }
 h2 {
   font-size: 24px;
@@ -25,6 +30,11 @@ h2 {
 h3 {
   font-size: 18px;
   line-height: 40px;
+  &.featured-title {
+    margin: 0; 
+    padding: 0;
+    line-height: 24px;
+  }
 }
 h4 {
   font-size: 14px;
@@ -52,6 +62,13 @@ p {
   &.attribution { 
     font-size: 1em;
   }
+  &.featured-date {
+    margin: 0;
+  }
+  &.meta {
+    margin: 0; 
+    padding: 0;
+  }
 }
 ul, li {
   font-size: 1.2em; 
@@ -63,6 +80,7 @@ ul, li {
 }
 .page-header {
 	border: none;
+  margin: 2em 0 0 0; 
 }
 .page-title {
 	text-transform: uppercase;
@@ -112,7 +130,18 @@ ul, li {
     .inner-shadow(0, 2px, 4px, 0.15);
   }
 }
-
+/* Widgets */
+.widget_featured_post_widget p {
+  font-size: 1em;
+}
+.widget_featured_post_widget h4 { 
+  font-size: 1.3em;
+}
+#inner-footer {
+  ul {
+    font-size: 1em;
+  }
+}
 /* Mentors Pages */
 .mentor-info h1 { 
   font-size: 16px; 

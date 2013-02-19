@@ -17,12 +17,13 @@
 							</div>							
 						</header> <!-- end article header -->
 						
-						<div class="mentor-info span3">
+						<aside class="mentor-info span3">
 							<div><?php the_post_thumbnail( 'profile-thumb' ); ?></div>
 							<h1><?php the_title(); ?></h1>
-							<span class="location"><?php print_custom_field('company'); ?></span><br>
-							<span class="location"><?php print_custom_field('location'); ?></span>	
-						</div>
+							<p><?php print_custom_field('company'); ?></p>
+							<p><?php print_custom_field('location'); ?></p>
+							<p class="twitter"><a href="https://twitter.com/<?php print_custom_field('twitter'); ?>" target="_blank" /><?php print_custom_field('twitter'); ?></a></p>
+						</aside>
 						
 						<section class="post_content clearfix span8" itemprop="articleBody">
 							<?php the_content(); ?>

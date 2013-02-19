@@ -1,3 +1,7 @@
+Customized by propercursive.com for Flashpoint @ Ga Tech website
+
+
+=== Original Plugin Info ===
 === Custom Content List ===
 Contributors: benjaminniess
 Donate link: http://beapi.fr/donate

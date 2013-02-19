@@ -142,12 +142,10 @@ div[id*='attachment_']{
 	max-width: 100%;
 	height: 100%;
 }
-
-#credit320{
-	background: url('images/320press_mini.png') no-repeat left top transparent;
-	padding-left: 20px;
+.hero-unit {
+	background: @base;
+	.gradient(@base, @base, lighten(@base,5%)); 
 }
-
 #main .hero-unit img{
 	margin-bottom: 1em;
 }
@@ -580,4 +578,5 @@ blockquote.pull-left{
 		padding-left: 0;
 		padding-right: 0;
 	}
+
 }

@@ -27,7 +27,10 @@ Template Name: Mentors Page
                 $args = array( 
                   'post_type' => 'mentors',
                   'orderby' => 'menu_order',
-                  'order' => 'ASC');
+                  'order' => 'ASC',
+                  'post_status' => 'publish',
+                  'posts_per_page' => '-1'
+                  );
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post();
                   echo '<li class="span3"><a href="';

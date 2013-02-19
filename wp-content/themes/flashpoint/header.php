@@ -19,13 +19,11 @@
 		
 		<!-- icons & favicons -->
 		<!-- For iPhone 4 -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/h/apple-touch-icon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/fp-114px.png">
 		<!-- For iPad 1-->
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/m/apple-touch-icon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/fp-72px.png">
 		<!-- For iPhone 3G, iPod Touch and Android -->
-		<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/l/apple-touch-icon-precomposed.png">
-		<!-- For Nokia -->
-		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/l/apple-touch-icon.png">
+		<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/fp-57px.png">
 		<!-- For everything else -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 				
@@ -94,8 +92,12 @@
 					<div class="navbar-inner">
 						<div class="container-fluid nav-container">
 							<nav role="navigation">
-								<!-- <a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a> -->
-								
+								<div class="mobile-icons pull-left">
+									<a href="<?php get_home_url(); ?>/faq/" title="About"><img src="<?php echo get_template_directory_uri(); ?>/images/about-icon.png" /></a>
+									<a href="<?php get_home_url(); ?>/mentors/" title="Mentors"><img src="<?php echo get_template_directory_uri(); ?>/images/mentor-icon.png" /></a>
+									<a href="<?php get_home_url(); ?>/teams/" title="Teams"><img src="<?php echo get_template_directory_uri(); ?>/images/team-icon.png" /></a>
+									<a href="<?php get_home_url(); ?>/blog/" title="Blog"><img src="<?php echo get_template_directory_uri(); ?>/images/blog-icon.png" /></a>
+								</div>
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 							        <span class="icon-bar"></span>
 							        <span class="icon-bar"></span>

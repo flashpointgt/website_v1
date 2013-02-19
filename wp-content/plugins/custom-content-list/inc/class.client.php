@@ -66,14 +66,13 @@ class Custom_Content_List_Client {
 		if ( $list_query->have_posts() ) : ?>
 			<div class="custom_content_list">
 				<?php if ( !empty( $title ) ) echo '<h3>' . $title . '</h3>'; ?>
-				
-				<ul class="grid-list">
-					<?php while ( $list_query->have_posts() ) : $list_query->the_post(); ?>
-						<li class="span4">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('team-thumb'); ?></a>
-						</li>	
-					<?php endwhile; ?>
-				</ul>
+					<ul class="grid-list">
+						<?php while ( $list_query->have_posts() ) : $list_query->the_post(); ?>
+							<li class="span3">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('team-thumbs'); ?></a>
+							</li>	
+						<?php endwhile; ?>
+					</ul>
 				<?php // Link
 				if ( !empty( $see_all_label ) && !empty( $see_all_link )  ) : ?>
 					<span class="see_all"><a href="<?php echo esc_url( $see_all_link ); ?>"><?php echo $see_all_label; ?></a></span>

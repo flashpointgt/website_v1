@@ -47,6 +47,7 @@ add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'mentors-thumb', 165, 200, true ); 
 add_image_size( 'profile-thumb', 180, 220, true );
 add_image_size( 'team-thumb', 240, 140, true );
+add_image_size( 'team-thumbs', 180, 180, true );
 
 /* 
 to add more sizes, simply copy a line from above 
