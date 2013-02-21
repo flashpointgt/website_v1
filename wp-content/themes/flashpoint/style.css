@@ -19,7 +19,10 @@ LESS files can be found in the 'flashpoint/less' directory & can then be compile
 http://lesscss.org/
 http://incident57.com/codekit/
 
-If you switch to plain css, please remove 'flashpoint/less' folder or styles may be overwritten.
+If you switch to plain css (via editing the style.css file) please save the original as style-orig.css 
+and rename 'flashpoint/less' folder to 'flashpoint/less_disabled' or styles may be overwritten.
+
+Small CSS edits can also be added via the 'CSS Stylesheet Editor' here: /wp-admin/themes.php?page=editcss
 */
 /* LESS Elements */
 /*---------------------------------------------------
