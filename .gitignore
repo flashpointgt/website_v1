@@ -1,4 +1,8 @@
-sftp-config.json
-.DS_Store
+
 wp-config.php
+wp-content/uploads
+wp-content/upgrade
+
+.DS_Store
+sftp-config.json
 remote.txt
