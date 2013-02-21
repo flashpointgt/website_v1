@@ -73,10 +73,10 @@ function get_custom_field($raw_fieldname, $options=null) {
 	// Raw value from the db
 	$value = get_post_meta($post_id, $fieldname, true);
 
-	// Default value?
-	if ( empty($value) && isset(CCTM::$data['custom_field_defs'][$fieldname]['default_value'])) {
-		$value = CCTM::$data['custom_field_defs'][$fieldname]['default_value'];
-	}
+	// Default value? See http://wordpress.org/support/topic/default-value-behaviour?replies=7
+	//if ( empty($value) && isset(CCTM::$data['custom_field_defs'][$fieldname]['default_value'])) {
+	//	$value = CCTM::$data['custom_field_defs'][$fieldname]['default_value'];
+	//}
 
 	// Pass thru Output Filters
 	$i = 1; // <-- skip 0 b/c that's the $raw_fieldname in the $options_array
@@ -283,10 +283,6 @@ function get_incoming_links($post_types_filter=array(), $post_id=null) {
 function get_post_complete($id) {
 	$Q = new GetPostsQuery();
 	return $Q->get_post($id);
-//	global $wpdb;
-//	$post = $wpdb->get_row($wpdb->prepare("SELECT * FROM $wpdb->posts WHERE ID = %d LIMIT 1", $id), ARRAY_A);
-//	return $post;
-	
 }
 
 //------------------------------------------------------------------------------

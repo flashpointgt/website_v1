@@ -9,9 +9,11 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
-							<div class="span12 breadcrumbs">
-								<a href="<?php get_home_url(); ?>/staff">Staff</a> 
-								<span><?php the_title(); ?></span>
+							<div class="row">
+								<div class="span12 breadcrumbs">
+									<a href="<?php get_home_url(); ?>/staff">Staff</a> 
+									<span><?php the_title(); ?></span>
+								</div>
 							</div>							
 						</header> <!-- end article header -->
 						

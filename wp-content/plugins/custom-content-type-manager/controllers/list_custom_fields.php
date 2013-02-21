@@ -57,8 +57,9 @@ foreach ($defs as $field_name => $d) {
 		, __('Edit', CCTM_TXTDOMAIN)
 	);
 	$d['duplicate_field_link'] = sprintf(
-		'<a href="?page=cctm_fields&a=duplicate_custom_field&field=%s&_wpnonce=%s" title="%s">%s</a>'
+		'<a href="?page=cctm_fields&a=duplicate_custom_field&field=%s&type=%s&_wpnonce=%s" title="%s">%s</a>'
 		, $d['name']
+		, $d['type']
 		, wp_create_nonce('cctm_edit_field')
 		, __('Duplicate this custom field', CCTM_TXTDOMAIN)
 		, __('Duplicate', CCTM_TXTDOMAIN)
@@ -70,6 +71,24 @@ foreach ($defs as $field_name => $d) {
 		, __('Delete this custom field', CCTM_TXTDOMAIN)
 		, __('Delete', CCTM_TXTDOMAIN)
 	);
+
+	// Show associated post-types
+	$d['post_types'] = array();
+	if (isset(CCTM::$data['post_type_defs']) && is_array(CCTM::$data['post_type_defs'])) {
+		foreach (CCTM::$data['post_type_defs'] as $pt => $pdef) {
+			if (isset($pdef['custom_fields']) && is_array($pdef['custom_fields']) 
+				&& in_array($field_name, $pdef['custom_fields'])) {
+				$d['post_types'][] = $pt;
+			}
+		}
+	}
+	if (empty($d['post_types'])) {
+		$d['post_types'] = '<em>'.__('Unassigned', CCTM_TXTDOMAIN).'</em>';
+	}
+	else {
+		$d['post_types'] = implode(', ', $d['post_types'] );
+	}
+	
 
 	$data['fields'] .= CCTM::load_view('tr_custom_field.php',$d);
 }

@@ -9,18 +9,17 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
-							<div class="span12 breadcrumbs">
-								<ul>
-									<li><a href="<?php get_home_url(); ?>/partners">Partners</a></li>
-									<li><span><?php the_title(); ?></span></li>
-								</ul>
+							<div class="row">
+								<div class="span12 breadcrumbs">
+									<a href="<?php get_home_url(); ?>/partners">Partners</a> 
+									<span><?php the_title(); ?></span>
+								</div>
 							</div>							
 						</header> <!-- end article header -->
 						
-						<aside class="span3">
-							<div><?php the_post_thumbnail( 'profile-thumb' ); ?></div>
-							<h1><?php the_title(); ?></h1>
-							<p><?php print_custom_field('company'); ?></p>
+						<aside class="partner-info span3">
+							<div><a href="http://<?php print_custom_field('website'); ?>" target="_blank" /><?php the_post_thumbnail( 'profile-thumb' ); ?></a></div>
+							<p><a href="http://<?php print_custom_field('website'); ?>" target="_blank" /><?php print_custom_field('website'); ?></a></p>
 							<p><?php print_custom_field('location'); ?></p>
 							<p class="twitter"><a href="https://twitter.com/<?php print_custom_field('twitter'); ?>" target="_blank" /><?php print_custom_field('twitter'); ?></a></p>
 						</aside>

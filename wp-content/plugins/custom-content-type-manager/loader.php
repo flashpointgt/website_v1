@@ -72,7 +72,7 @@ if (empty(CCTM::$errors)) {
 
 		// Standardize Fields
 		add_action('do_meta_boxes', 'StandardizedCustomFields::remove_default_custom_fields', 10, 3 );
-		add_action('admin_menu', 'StandardizedCustomFields::create_meta_box' );
+		add_action('add_meta_boxes', 'StandardizedCustomFields::create_meta_box' );
 		add_action('save_post', 'StandardizedCustomFields::save_custom_fields', 1, 2 ); //! TODO: register this action conditionally
 
 		// Customize the page-attribute box for custom page hierarchies
@@ -98,8 +98,10 @@ if (empty(CCTM::$errors)) {
 				require_once 'includes/functions.php';
 				CCTM::$Columns = new CCTM_Columns();
 				CCTM::$Columns->post_type = $post_type;
+
 				// Draw the column headers
-				add_filter("manage_edit-{$post_type}_columns" , array(CCTM::$Columns, $post_type));
+				add_filter("manage_{$post_type}_posts_columns" , array(CCTM::$Columns, $post_type));
+
 				// Handle the data in each cell
 				add_action('manage_posts_custom_column', array(CCTM::$Columns, 'populate_custom_column_data'));
 				add_action('manage_pages_custom_column', array(CCTM::$Columns, 'populate_custom_column_data'));

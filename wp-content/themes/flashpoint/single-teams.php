@@ -18,7 +18,7 @@
 						</header> <!-- end article header -->
 						
 						<aside class="team-info span3">
-							<a href="<?php print_custom_field('website'); ?>" target="_blank" /><?php the_post_thumbnail( 'wpbs-featured' ); ?></a>
+							<a href="http://<?php print_custom_field('website'); ?>" target="_blank" /><?php the_post_thumbnail( 'wpbs-featured' ); ?></a>
 							<p><a href="http://<?php print_custom_field('website'); ?>" target="_blank" /><?php print_custom_field('website'); ?></a></p>
 							<p><?php print_custom_field('location'); ?></p>
 							<p><a href="https://twitter.com/<?php print_custom_field('twitter'); ?>" target="_blank" /><?php print_custom_field('twitter'); ?></a></p>
@@ -27,8 +27,10 @@
 						</aside>
 						
 						<section class="post_content clearfix span8" itemprop="articleBody">
-							<?php the_content(); ?>
-
+							<div class="team-description">
+								<?php the_content(); ?>
+							</div>
+							
 							<?php wp_link_pages(); ?>
 					
 						</section> <!-- end article section -->

@@ -19,7 +19,7 @@ class CCTM {
 	// See http://php.net/manual/en/function.version-compare.php:
 	// any string not found in this list < dev < alpha =a < beta = b < RC = rc < # < pl = p
 	const name   = 'Custom Content Type Manager';
-	const version = '0.9.6.7';
+	const version = '0.9.7';
 	const version_meta = 'pl'; // dev, rc (release candidate), pl (public release)
 
 	// Required versions (referenced in the CCTMtest class).
@@ -163,13 +163,12 @@ class CCTM {
 	);
 
 	/**
-	 * List default settings here. (see controllers/settings.php)
+	 * List default global settings here. (see controllers/settings.php)
 	 */
 	public static $default_settings = array(
 		'delete_posts' => 0
 		, 'delete_custom_fields' => 0
 		, 'add_custom_fields' => 0
-		, 'update_custom_fields' => 0
 		, 'show_custom_fields_menu' => 1
 		, 'show_settings_menu' => 1
 		, 'show_foreign_post_types' => 1
@@ -181,6 +180,21 @@ class CCTM {
 		, 'flush_permalink_rules' => 1
 		, 'pages_in_rss_feed'	=> 0
 		, 'enable_right_now'	=> 1
+		, 'hide_posts'	=> 0
+		, 'hide_pages'	=> 0
+		, 'hide_links'	=> 0
+		, 'hide_comments' => 0
+	);
+
+	// Default metabox definition
+	public static $metabox_def = array(
+		'id' => 'cctm_default',
+		'title' => 'Custom Fields',
+		'context' => 'normal',
+		'priority' => 'default',
+		'post_types' => array(),
+		'callback' => '',
+		'callback_args' => '',
 	);
 
 	// Where are the icons for custom images stored?
@@ -294,8 +308,8 @@ class CCTM {
 				__('Could not create the cache directory at %s.', CCTM_TXTDOMAIN)
 				, "<code>$cache_dir</code>. Please create the directory with permissions so PHP can write to it.");
 
-			if (defined('CCTM_DEBUG') && CCTM_DEBUG == true) {			
-				$myFile = "/tmp/cctm.txt";
+			if (defined('CCTM_DEBUG')) {			
+				$myFile = CCTM_DEBUG;
 				$fh = fopen($myFile, 'a') or die("can't open file");
 				fwrite($fh, 'Failed to create directory '.$cache_dir.$subdir."\n");
 				fclose($fh);
@@ -442,7 +456,7 @@ class CCTM {
 			// Also, we have to fix the bugs with WP's thickbox.js, so here we include a patched file.
 			wp_register_script('cctm_thickbox', CCTM_URL . '/js/thickbox.js', array('thickbox') );
 			wp_enqueue_script('cctm_thickbox');
-			wp_enqueue_style('thickbox' );
+			wp_enqueue_style('thickbox');
 
 			wp_enqueue_style('jquery-ui-tabs', CCTM_URL . '/css/smoothness/jquery-ui-1.8.11.custom.css');
 			wp_enqueue_script('jquery-ui-tabs');
@@ -571,6 +585,10 @@ class CCTM {
 					update_option( self::db_key, self::$data );
 				}
 			}
+			// Clear the cache
+			unset(CCTM::$data['cache']);
+			unset(CCTM::$data['warnings']);
+			update_option(self::db_key, self::$data);
 		}
 
 		// If this is empty, then it is a first install, so we timestamp it
@@ -646,7 +664,7 @@ class CCTM {
 	 * @param	string $dirPath
 	 */
 	public static function delete_dir($dirPath) {
-	    if (! is_dir($dirPath)) {
+	    if (!is_dir($dirPath)) {
 	    	return false;
 	    }
 	    if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
@@ -656,7 +674,8 @@ class CCTM {
 	    foreach ($files as $file) {
 	        if (is_dir($file)) {
 	            self::delete_dir($file);
-	        } else {
+	        } 
+	        else {
 	            unlink($file);
 	        }
 	    }
@@ -740,11 +759,22 @@ class CCTM {
 	/**
 	 * Adds formatting to a string to make an "error" message.
 	 *
-	 * @param string $msg localized error message
+	 * @param mixed $msg localized error message, or an array of messages
+	 * @param string $title optional
 	 * @return string
 	 */
-	public static function format_error_msg($msg) {
-		return sprintf('<div class="error"><p>%s</p></div>', $msg);
+	public static function format_error_msg($msg,$title='') {
+		if ($title) {
+			$title = '<h3>'.$title.'</h3>';
+		}
+		if (is_array($msg)) {
+			$tmp = '';
+			foreach($msg as $m) {
+				$tmp .= '<li>'.$m.'</li>';
+			}
+			$msg = '<ul style="margin-left:30px">'.$tmp.'</ul>';
+		}
+		return sprintf('<div class="error">%s<p>%s</p></div>', $title, $msg);
 	}
 
 
@@ -1300,6 +1330,9 @@ class CCTM {
 			$fieldtype = self::get_value(self::$data['custom_field_defs'][$fieldname], 'type');
 			$field_types[] = $fieldtype;
 		}
+		elseif ($page == 'admin.php' && $action =='duplicate_custom_field') {
+			$field_types[] = CCTM::get_value($_GET,'type');
+		}
 
 		// We only get here if we survived the gauntlet above
 		foreach ($field_types as $shortname) {
@@ -1765,6 +1798,9 @@ class CCTM {
 			case 'cctm_fields': // custom-fields
 				$action = 'list_custom_fields';
 				break;
+			case 'cctm_metaboxes': // custom-metaboxes
+				$action = 'list_metaboxes';
+				break;
 			case 'cctm_settings': // settings
 				$action = 'settings';
 				break;
@@ -1823,7 +1859,7 @@ class CCTM {
 	
 			// Simple Placeholders
 			foreach ($hash as $key => $value) {
-				if ( !is_array($value) ) {
+				if (is_scalar($value)) {
 					$tpl = str_replace('[+'.$key.'+]', $value, $tpl);
 				}
 			}
@@ -1877,8 +1913,8 @@ class CCTM {
 			}
 		}
 		else {
-			if (defined('CCTM_DEBUG') && CCTM_DEBUG == true) {			
-				$myFile = "/tmp/cctm.txt";
+			if (defined('CCTM_DEBUG')) {			
+				$myFile = CCTM_DEBUG;
 				$fh = fopen($myFile, 'a') or die("can't open file");
 				fwrite($fh, print_r(debug_backtrace(), true));
 				fclose($fh);
@@ -2118,6 +2154,12 @@ class CCTM {
 		//  http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=112
 		//  http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=360
 
+		// 	http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=458
+		if ( substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/')+1) == 'edit.php' 
+			&& self::get_value($_GET, 'post_type')) {
+			return $query;
+		}
+		
 		// Control what shows up in the RSS feed
 		if (isset($query['feed'])) {
 			$args = array( 'public' => true); // array('exclude_from_search'=>false); // ugh. WP has bad support here.
@@ -2125,8 +2167,8 @@ class CCTM {
 			unset($post_types['revision']);
 			unset($post_types['nav_menu_item']);
 			
-			if (defined('CCTM_DEBUG') && CCTM_DEBUG == true) {			
-				$myFile = "/tmp/cctm.txt";
+			if (defined('CCTM_DEBUG')) {			
+				$myFile = CCTM_DEBUG;
 				$fh = fopen($myFile, 'a') or die("can't open file");
 				fwrite($fh, 'Request post-types:'. print_r($post_types, true));
 				fclose($fh);
@@ -2144,7 +2186,6 @@ class CCTM {
 					unset($post_types[$pt]);
 				}
 			}
-			
 			$query['post_type'] = $post_types;
 
 		}
@@ -2168,22 +2209,24 @@ class CCTM {
 	
 
 		}
-		// Handle posts that use categories.
+		// Ensure category pages show all available post-types
 		elseif ((isset($query['category_name']) && !empty($query['category_name'])) 
 			|| (isset($query['cat']) && !empty($query['cat']))) {
-			$args = array( 'public' => true, '_builtin' => false );
-			$public_post_types = get_post_types( $args );
-
-			// Only posts get categories, not pages, so our first post-type is "post"...  has_archive is not enabled.
-			$search_me_post_types = array('post');
+			if (!isset($query['page'])) { // <-- on a true category page, this won't be set
+				$args = array( 'public' => true, '_builtin' => false );
+				$public_post_types = get_post_types( $args );
 	
-			foreach (self::$data['post_type_defs'] as $post_type => $def) {
-				if ( isset($def['taxonomies']) && is_array($def['taxonomies']) && in_array('category', $def['taxonomies'])) {
-					$search_me_post_types[] = $post_type;
+				// Only posts get categories, not pages, so our first post-type is "post"...  has_archive is not enabled.
+				$search_me_post_types = array('post');
+		
+				foreach (self::$data['post_type_defs'] as $post_type => $def) {
+					if ( isset($def['taxonomies']) && is_array($def['taxonomies']) && in_array('category', $def['taxonomies'])) {
+						$search_me_post_types[] = $post_type;
+					}
 				}
+						
+				$query['post_type'] = $search_me_post_types;
 			}
-	
-			$query['post_type'] = $search_me_post_types;		
 		}
 		// Handle tag pages
 		elseif (isset($query['tag'])) {
@@ -2203,7 +2246,7 @@ class CCTM {
 			$query['post_type'] = $search_me_post_types;		
 		}
 
-		
+	
 		return $query;
 	}
 
@@ -2310,8 +2353,8 @@ class CCTM {
 			}
 		}
 		
-		if (defined('CCTM_DEBUG') && CCTM_DEBUG == true) {			
-			$myFile = "/tmp/cctm.txt";
+		if (defined('CCTM_DEBUG')) {			
+			$myFile = CCTM_DEBUG;
 			$fh = fopen($myFile, 'a') or die("can't open file");
 			fwrite($fh, print_r($query->get('post_type'), true));
 			fclose($fh);

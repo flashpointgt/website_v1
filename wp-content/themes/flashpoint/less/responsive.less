@@ -132,7 +132,26 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
-  
+  .breadcrumbs { 
+    ul { 
+      padding-bottom: 1em; 
+    }
+  }
+  #mentors-list { 
+    img {
+      width: 140px; 
+      height: 165px;
+    }
+  } 
+  .mentor-info {
+    img { 
+      margin: 0 2em; 
+      float: left; 
+    }
+    h1 { 
+      margin-top: 2em; 
+    }
+  }
 }
 @media (min-width: 980px) {
 	#main { 
@@ -194,15 +213,24 @@ body {
         width: 100%;
     }
   } 
+  #mentors-list { 
+    img {
+      width: 165px; 
+      height: 200px;
+    }
+  }
   .mentor-info {  
     padding-top: 1.8em;
   }
   .pagination { 
     margin-bottom: 4em;
   }
-  @media (min-width: 1024px) {
-    .widget_FacebookLikeBox {
-      display: block;
-    } 
+  .team-description > p:last-of-type {
+    margin-bottom: 8em;
   }
+}
+@media (min-width: 1024px) {
+  .widget_FacebookLikeBox {
+    display: block;
+  } 
 }

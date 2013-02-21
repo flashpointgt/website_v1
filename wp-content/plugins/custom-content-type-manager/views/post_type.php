@@ -337,7 +337,7 @@ just want to make sure that the form is presented uncorrupted.
 		<div class="cctm_element_wrapper" id="custom_field_wrapper_supports_title">			
 			<input type="checkbox" name="supports[]" class="cctm_checkbox" id="supports_title" value="title" <?php print CCTM::is_checked($data['def']['supports'], 'title'); ?> /> 
 			<label for="supports_title" class="cctm_label cctm_checkbox_label" id="cctm_label_supports_title_label"><?php _e('Title', CCTM_TXTDOMAIN); ?></label>
-			<span class="cctm_description"><?php _e('Post Title', CCTM_TXTDOMAIN); ?></span>
+			<span class="cctm_description"><?php _e('Post Title.', CCTM_TXTDOMAIN); ?> <span style="color:red;"><?php _e('Unchecking this is not recommended.', CCTM_TXTDOMAIN); ?></span></span>
 		</div>
 			
 		
@@ -409,7 +409,7 @@ just want to make sure that the form is presented uncorrupted.
 					onclick="javascript:toggle_div('cctm_hierarchical_custom', 'custom_field_wrapper_custom_hierarchy', '1');"/> 
 				<label for="cctm_hierarchical_custom" class="cctm_label cctm_checkbox_label" id="cctm_label_hierarchical"><?php _e('Use Custom Hierarchy', CCTM_TXTDOMAIN); ?></label>
 				<span class="cctm_description"><?php _e('Allows custom hierarchies to be specified.', CCTM_TXTDOMAIN); ?>
-				<span style="color:red;"><?php _e('Hierarchical must be checked.', CCTM_TXTDOMAIN); ?></span></span>
+				(<?php _e('Hierarchical must be checked.', CCTM_TXTDOMAIN); ?>)</span>
 
 				
 			<!-- Working : Custom hierarchy-->
@@ -662,7 +662,7 @@ just want to make sure that the form is presented uncorrupted.
 		<div class="cctm_element_wrapper" id="custom_field_wrapper_capability_type">			
 			<label for="capability_type" class="cctm_label cctm_text_label" id="cctm_label_capability_type"><?php _e('Capability Type', CCTM_TXTDOMAIN); ?></label>
 			<input type="text" name="capability_type" class="cctm_text" id="capability_type" value="<?php print htmlspecialchars($data['def']['capability_type']); ?>"/>
-			<span class="cctm_description"><?php _e('The string to use to build the read, edit, and delete capabilities. May be passed a comma-separated string (e.g. "child,children") to allow for alternative plurals. Default: "post".', CCTM_TXTDOMAIN); ?></span>
+			<span class="cctm_description"><?php _e('The string to use to build the read, edit, and delete capabilities. May be passed a comma-separated string to allow for alternative plurals (e.g. "child,children"). Default: "post".', CCTM_TXTDOMAIN); ?></span>
 		</div>
 
 		<!--!map_meta_cap -->
@@ -779,6 +779,20 @@ just want to make sure that the form is presented uncorrupted.
 				<label for="taxonomy_tags" class="cctm_label cctm_checkbox_label" id="cctm_label_taxonomies[]"><?php _e('Enable Tags', CCTM_TXTDOMAIN); ?></label>
 				<span class="cctm_description"><?php _e('Simple word associations.', CCTM_TXTDOMAIN); ?></span>
 			</div>
+			
+			<?php 
+			// Handle all other taxonomies
+			$taxonomies = get_taxonomies( array(), 'objects');
+			foreach ($taxonomies as $tax => $t): 
+				if (in_array($tax, array('category','post_tag','nav_menu','link_category','post_format'))) {
+					continue; // skip
+				}
+			?>
+				<div class="cctm_element_wrapper" id="custom_field_wrapper_taxonomy_<?php print $t->name; ?>">			
+					<input type="checkbox" name="taxonomies[]" class="cctm_checkbox" id="taxonomy_<?php print $t->name; ?>" value="<?php print $t->name; ?>" <?php print CCTM::is_checked($data['def']['taxonomies'], $t->name); ?> /> 
+					<label for="taxonomy_<?php print $t->name; ?>" class="cctm_label cctm_checkbox_label" id="cctm_label_taxonomies[]"><?php print $t->labels->name; ?></label>
+				</div>
+			<?php endforeach; ?>
 	</div>
 
 

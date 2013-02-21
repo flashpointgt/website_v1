@@ -52,10 +52,14 @@ function cctm_upload(fieldname, upload_type) {
 		// alert(html); // see what on earth WP is sending back to the post...
 		var attachment_guid; 
 		
-		//var matches = html.match(/href=['|"](.*?)['|"]/);
-		var matches = html.match(/src=['|"](.*?)['|"]/);
-//		console.log(matches);
-//		console.log(imatches);
+		var matches;
+		if (html.indexOf("src") != -1){
+			matches = html.match(/src=['|"](.*?)['|"]/);
+		}
+		else if (html.indexOf("href")) {
+			matches = html.match(/href=['|"](.*?)['|"]/);
+		}
+
 		if (matches != null) {
     		// See http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=404
     		// could be something like http://mysite.com/?attachment_id=412 or http://mysite.com/wp-content/uploads/2012/08/my-image.jpg
@@ -212,7 +216,7 @@ yet have a fieldname.
 ------------------------------------------------------------------------------*/
 function search_form_display(fieldname,fieldtype) {
 	var search_parameters = jQuery('#search_parameters').val();
-	//alert(search_parameters);
+	console.log(search_parameters);
 	var data = {
 	        "action" : 'get_search_form',
 	        "fieldname" : fieldname,

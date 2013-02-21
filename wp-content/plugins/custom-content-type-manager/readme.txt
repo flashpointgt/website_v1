@@ -1,11 +1,11 @@
 === Custom Content Type Manager ===
 Contributors: fireproofsocks
-Donate link: http://www.indiegogo.com/cctm
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FABHDKPU7P6LN
 Tags: cms, content management, custom post types, custom content types, custom fields, images, image fields, ecommerce, modx
 Requires at least: 3.3.0
-Tested up to: 3.4.2
-Stable tag: 0.9.6.7
-Version: 0.9.6.7
+Tested up to: 3.5.1
+Stable tag: 0.9.7
+Version: 0.9.7
 
 Break out of your blog!  Create custom fields for dropdowns, images, and more!  This plugin gives Wordpress true CMS functionality.
 
@@ -77,6 +77,13 @@ You can always checkout the most recent version of the code at
 or by going to your wp-content/plugins directory and executing the following command from the command-line:
 
 	svn checkout http://plugins.svn.wordpress.org/custom-content-type-manager/trunk custom-content-type-manager 
+
+= 0.9.7 = 
+
+* Support for custom metaboxes: you can now put your fields anywhere on the admin pages.
+* Added a pattern validator which supports simple patterns and full regular expressions via preg_match().
+* Added a Directory field type so you can easily list the contents of a directory.
+* Various bug fixes.
 
 = 0.9.6.7 = 
 
@@ -396,6 +403,10 @@ And if you REALLY want some of these features implemented, you can hire me to co
 
 
 == Upgrade Notice ==
+
+= 0.9.7 = 
+
+* New functionality: metabox support, a new Directory custom field type, and a new Pattern validator. Various bug fixes as well.
 
 = 0.9.6.7 = 
 

@@ -8,7 +8,9 @@
  *	2. It automatically creates/updates/deletes all custom fields in the postmeta
  *		table without the need to have to use the update_post_meta() and related functions.
  *	3. It does not check for user permissions. If you're running around in the PHP
- *		code, you have full run of the database. BEWARE!
+ *		code, you have full run of the database anyhow. BEWARE!  If implementing this
+ * 		in your own code/plugin, you should check the user permissions before executing functions
+ * 		in this class.
  *
  * @pacakge SummarizePosts
  */
@@ -45,6 +47,8 @@ class SP_Post {
 	 */
 	public $validators = array(
 		'ID' 				=> 'int',
+		'post_title'		=> 'text',
+		'post_content'		=> 'content',
 		'post_author'		=> 'int',
 		'post_date'			=> 'date',
 		'post_date_gmt'		=> 'date',
@@ -71,20 +75,14 @@ class SP_Post {
 	//! Private Functions
 	//------------------------------------------------------------------------------
 	/**
-	 * Tests whether a string is valid for use as a MySQL column name.  This isn't 
-	 * 100% accurate, but the postmeta virtual columns can be more flexible.
-	 * @param	string
-	 * @return	boolean
+	 * Content protection (allows html tags). See http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=454
+	 * @param	string	$val
+	 * @return	string
 	 */
-	private function _is_valid_column_name($str) {
-		if (preg_match('/[^a-zA-Z0-9\/\-\_]/', $str)) {
-			return false;
-		}
-		else {
-			return true;
-		}
+	private function _content($val) {
+		return wp_kses_post($val, array());
 	}
-	
+		
 	//------------------------------------------------------------------------------
 	/**
 	 * Convert input to datestamp
@@ -104,6 +102,24 @@ class SP_Post {
 		return (int) $val;
 	}
 	
+	//------------------------------------------------------------------------------
+	/**
+	 * Tests whether a string is valid for use as a MySQL column name.  This isn't 
+	 * 100% accurate because the postmeta virtual columns can be more flexible, but
+	 * generally, we want to enforce vanilla column names in case they end up being
+	 * used as object properties.
+	 * @param	string
+	 * @return	boolean
+	 */
+	private function _is_valid_column_name($str) {
+		if (preg_match('/[^a-zA-Z0-9\/\-\_]/', $str)) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+		
 	//------------------------------------------------------------------------------
 	/**
 	 * Used to override another filter.
@@ -130,6 +146,7 @@ class SP_Post {
 	 */
 	private function _sanitize($args) {
 		foreach ($args as $k => $v) {
+			// TODO: check for custom-field validators
 			if (isset($this->validators[$k])) {
 				$func_name = '_'.$this->validators[$k];
 				$args[$k] = $this->$func_name($v);

@@ -162,16 +162,12 @@ abstract class CCTM_FormElement {
 			. '<code>'.htmlspecialchars(CCTM::$allowed_html_tags).'</code>';
 		$this->descriptions['evaluate_default_value'] = __('You can check this box if you want to enter a bit of PHP code into the default value field.');
 		
-		$this->descriptions['evaluate_create_value'] = __('Check this box to evaluate the PHP code in the "New Values" box when creating new posts.');
-		
-		$this->descriptions['evaluate_update_value'] = __('Check this box to evaluate the PHP code in the "Updated Values" box when updating posts.');
-		
 		$this->descriptions['label'] = __('The label is displayed when users create or edit posts that use this custom field.', CCTM_TXTDOMAIN);
 		$this->descriptions['name'] = __('The name identifies the meta_key in the wp_postmeta database table. The name should contain only letters, numbers, and underscores. You will use this name in your template functions to identify this custom field.', CCTM_TXTDOMAIN);
 		$this->descriptions['name'] .= sprintf('<br /><span style="color:red;">%s</span>'
 			, __('WARNING: if you change the field name, you will have to update any functions that reference this field by name, e.g. <code>get_custom_field()</code>, <code>print_custom_field()</code>,  or any search criteria.', CCTM_TXTDOMAIN));
 			
-		$this->descriptions['is_repeatable'] = __('If selected, the user will be able to enter multiple instances of this field, e.g. multiple images. Storing multiple values infers storing an array of values, so you will have to use the "to_array" output filter, even if you only use one instance of the field.', CCTM_TXTDOMAIN);
+		$this->descriptions['is_repeatable'] = __('If selected, the user will be able to enter multiple instances of this field, e.g. multiple images. Your templates will need to handle formatting an array of values, e.g. via the "to_array" or other output filters, even if you only use one instance of the field.', CCTM_TXTDOMAIN);
 		$this->descriptions['required'] = __('If checked, users must add a value to this field before the page can be published.', CCTM_TXTDOMAIN);
 		$this->descriptions['checked_value'] = __('What value should be stored in the database when this checkbox is checked?', CCTM_TXTDOMAIN);
 		$this->descriptions['unchecked_value'] =  __('What value should be stored in the database when this checkbox is unchecked?', CCTM_TXTDOMAIN);
@@ -409,10 +405,7 @@ abstract class CCTM_FormElement {
 				if ($this->validator == $shortname) {
 					$is_selected = ' selected="selected"';
 					$Vobj->set_options($this->validator_options);
-					$validator_options = $Vobj->get_options_html();
-					
-					$validator_options = sprintf('<div class="postbox"><h3 class="hndle"><span>%s</span></h3>
-				<div class="inside">%s</div></div>', __('Options', CCTM_TXTDOMAIN), $validator_options);
+					$validator_options = $Vobj->draw_options();
 				}
 				
 				$select_options .= sprintf('<option value="%s"%s>%s</option>', $shortname, $is_selected, $Vobj->get_name());
@@ -823,17 +816,20 @@ abstract class CCTM_FormElement {
 			// it's a CREATE operation
 			if ( empty($this->original_name) ) {
 
-				if ( isset(CCTM::$data['custom_field_defs']) && is_array(CCTM::$data['custom_field_defs'])
-					&& in_array( $posted_data['name'], array_keys(CCTM::$data['custom_field_defs']))) {
-					$this->errors['name'][] = sprintf( __('The name %s is already in use. Please choose another name.', CCTM_TXTDOMAIN), '<em>'.$posted_data['name'].'</em>');
-					$posted_data['name'] = '';
+				if ( isset(CCTM::$data['custom_field_defs']) && is_array(CCTM::$data['custom_field_defs'])) {
+					foreach (CCTM::$data['custom_field_defs'] as $cf =>$def) {
+						if (strtolower($posted_data['name']) == strtolower($cf)) {
+							$this->errors['name'][] = sprintf( __('The name %s is already in use. Please choose another name.', CCTM_TXTDOMAIN), '<em>'.$posted_data['name'].'</em>');						
+						}					
+					}
 				}
 			}
 			// it's an EDIT operation and we're renaming the field
 			elseif ( $this->original_name != $posted_data['name'] ) {
-				if ( isset(CCTM::$data['custom_field_defs']) && is_array(CCTM::$data['custom_field_defs'])
-					&& in_array( $posted_data['name'], array_keys(CCTM::$data['custom_field_defs']) ) ) {
-					$this->errors['name'][] = sprintf( __('The name %s is already in use. Please choose another name.', CCTM_TXTDOMAIN), '<em>'.$posted_data['name'].'</em>');
+				if ( isset(CCTM::$data['custom_field_defs']) && is_array(CCTM::$data['custom_field_defs'])) {
+						if (strtolower($posted_data['name']) == strtolower($cf)) {
+							$this->errors['name'][] = sprintf( __('The name %s is already in use. Please choose another name.', CCTM_TXTDOMAIN), '<em>'.$posted_data['name'].'</em>');						
+						}
 					$posted_data['name'] = '';
 				}
 			}
