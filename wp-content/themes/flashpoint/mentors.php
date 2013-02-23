@@ -26,8 +26,7 @@ Template Name: Mentors Page
                 <?
                 $args = array( 
                   'post_type' => 'mentors',
-                  'orderby' => 'menu_order',
-                  'order' => 'ASC',
+                  'orderby' => 'rand',
                   'post_status' => 'publish',
                   'posts_per_page' => '-1'
                   );
@@ -39,9 +38,10 @@ Template Name: Mentors Page
                   the_post_thumbnail('profile-thumb');
                   echo '<span class="mentor-details"><span class="mentor-name">';
                   the_title();
-                  echo '</span><div><span class="mentor-company">';
+                  echo '<br>';
+                  //echo '</span><div><span class="mentor-company">';
                   print_custom_field('company');
-                  echo '</span></span></div></a></li>';
+                  echo '</span></span></a></li>';
                 endwhile;
                 ?>     
               </ul> 

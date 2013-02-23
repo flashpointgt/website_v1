@@ -17,9 +17,10 @@
 						<?php bones_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 			
-					<p class="attribution">&copy; <?php echo date('Y'); ?> | <?php bloginfo('name'); ?> on <a href="https://www.facebook.com/FlashpointGT">Facebook</a> &amp; <a href="https://twitter.com/FlashpointGT">Twitter</a> | <a href="about/contact">Contact Us</a></p>
-
-					<!-- <p class="pull-right"><a href="http://320press.com" id="credit320" title="By the dudes of 320press">320press</a></p> -->
+					<p class="attribution">
+						<span>&copy; <?php echo date('Y'); ?> | <?php bloginfo('name'); ?> on <a href="https://www.facebook.com/FlashpointGT">Facebook</a> &amp; <a href="https://twitter.com/FlashpointGT">Twitter</a> | <a href="about/contact">Contact Us</a></span>
+						<span class="pull-right">website by <a href="http://twitter.com/propercursive" id="credit320" title="propercursive">@propercursive</a></span>
+					</p>
 					
 				</div> <!-- end #inner-footer -->
 				

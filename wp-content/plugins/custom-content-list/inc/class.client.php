@@ -69,7 +69,7 @@ class Custom_Content_List_Client {
 				<div class="row">
 					<ul class="grid-list">
 						<?php while ( $list_query->have_posts() ) : $list_query->the_post(); ?>
-							<li class="span3">
+							<li>
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('team-thumbs'); ?></a>
 							</li>	
 						<?php endwhile; ?>
