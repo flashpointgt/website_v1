@@ -21,7 +21,7 @@ Template Name: Mentors Page
             
             </header> <!-- end article header -->
           
-            <section class="post_content">
+            <section class="post_content mentors-page">
               <ul id="mentors-list">
                 <?
                 $args = array( 
@@ -38,8 +38,8 @@ Template Name: Mentors Page
                   the_post_thumbnail('profile-thumb');
                   echo '<span class="mentor-details"><span class="mentor-name">';
                   the_title();
-                  echo '<br>';
-                  //echo '</span><div><span class="mentor-company">';
+                  // echo '<br>';
+                  echo '</span><span class="mentor-company">';
                   print_custom_field('company');
                   echo '</span></span></a></li>';
                 endwhile;
