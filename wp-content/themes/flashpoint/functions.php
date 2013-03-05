@@ -235,8 +235,6 @@ function my_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 
-
-
 // filter tag clould output so that it can be styled by CSS
 function add_tag_class( $taglinks ) {
     $tags = explode('</a>', $taglinks);
@@ -692,6 +690,12 @@ function get_wpbs_theme_options(){
       }
 } // end get_wpbs_theme_options function
 
+// Limit Archive widget to 6 months
+function limit_archives( $args ) {
+    $args['limit'] = 6;
+    return $args;
+}
+add_filter( 'widget_archives_args', 'limit_archives' );
 
 
 ?>

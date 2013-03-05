@@ -137,6 +137,6 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" /></a>
 		</div>
 		<div class="banner-image">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/banner-green.jpg" alt="" />
+			<img src="<?php echo get_template_directory_uri(); ?>/images/banner.jpg" alt="" />
 		</div>
 		<div class="container-fluid main">		
