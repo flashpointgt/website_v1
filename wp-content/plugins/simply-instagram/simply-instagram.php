@@ -3,7 +3,7 @@
 Plugin Name: Simply Instagram
 Plugin URI: http://rollybueno.info/project/simply-instagram
 Description: Promote your Instagram photo through your Wordpress website using Simply Instagram.
-Version: 1.2.3
+Version: 1.2.4
 Author: Rolly G. Bueno Jr.
 Author URI: http://www.rollybueno.info
 License: GPL v2.0.
@@ -32,7 +32,7 @@ function simply_instagram_activate()
 	    dbDelta($sql);
 	}
     
-    	update_option( 'mediaViewer', 'prettyPhotoFrame' );
+    	update_option( 'mediaViewer', 'builtInMediaViewer' );
 	update_option( 'displayCommentMediaViewer', '5' );
 	update_option( 'displayPhotographer', 'true' );
 	update_option( 'displayComment', '5' );
@@ -229,6 +229,12 @@ function option_page_simply_instagram()
 		 <option value ="thumbnail" >Thumbnail</option>
 		 <option value ="low_resolution" >Low Resolution</option>
 		 <option value ="standard_resolution" >Standard Resolution</option>
+	</select>
+	
+	Display: <select name="totalphoto" class="sc-generator">	
+		<?php for( $i=1; $i<=20; $i++ ): ?>	
+		 <option value ="<?php echo $i; ?>" ><?php echo $i; ?></option>
+		<?php endfor; ?>
 	</select>
 
 	<p style="background-color: red;" id="generated-sc"></p>
@@ -502,19 +508,10 @@ function option_page_simply_instagram()
 	   <!-- BEGIN inside -->
 	   <div class="inside">
 		<div style="width: 90%; ">
-		 <p><strong>Check other Wordpress plugin that I have developed. Don't forget to follow me on Twitter.</strong></p>
-		 
-		 <?php
-		    $plugin_rss = file_get_contents( 'http://rollybueno.info/plugins/feed/plugins-feed.php' );
-		    
-		    $plugin= json_decode( $plugin_rss );
-		    
-		    for( $i=0; $i < count( $plugin->wordpress ); $i++ ):
-		    	if( $plugin->wordpress[$i]->title != "Simply Instagram" ):	
-		    		echo '<p><a href="' . $plugin->wordpress[$i]->url . '" style=" text-decoration: none; " class="plugin-homepage-' . $plugin->wordpress[$i]->slug . '" >' . $plugin->wordpress[$i]->title . '</a></p>';    		
-		    	endif;
-		    endfor;
-	   	?>
+		 <p><strong>Check other Wordpress plugin that I have developed. Dont forget to follow me on Twitter.</strong></p>
+		 <p><a href="http://wordpress.org/extend/plugins/simply-youtube/" style=" text-decoration: none; " class="plugin-homepage-simply-youtube" >Simply Youtube</a></p>
+		 <p><a href="http://wordpress.org/extend/plugins/real-time-twitter/" style=" text-decoration: none; " class="plugin-homepage-real-time-twitter" >Real Time Twitter</a></p>
+		 <p><a href="http://wordpress.org/extend/plugins/advanced-noaa-weather-forecast/" style=" text-decoration: none; " class="plugin-homepage-noaa" >Advanced NOAA Weather Forecast</a></p>
 		 
 		 <p style="text-align: center; "><a href="https://twitter.com/rbuenojr" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @rbuenojr</a></p>
 		 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}	(document,"script","twitter-wjs");</script>
@@ -542,11 +539,12 @@ function option_page_simply_instagram()
 		      var endpoints = jQuery("select[name=endpoints]").val();// || [];
 		      var type = jQuery("select[name=type]").val();// || [];
 		      var size = jQuery("select[name=size]").val();
+		      var display = jQuery("select[name=totalphoto]").val();
 		      if( endpoints == "media" ){
-		        jQuery("p#generated-sc").html( '[simply_instagram endpoints="' + endpoints + '" type="popular" size="' + size + '"]' );
+		        jQuery("p#generated-sc").html( '[simply_instagram endpoints="' + endpoints + '" type="popular" size="' + size + '" display="' + display + '"]' );
 		        jQuery("select[name=type]").attr( "disabled", true );
 		      }else{
-		      	jQuery("p#generated-sc").html( '[simply_instagram endpoints="' + endpoints + '" type="' + type + '" size="' + size + '"]' );
+		      	jQuery("p#generated-sc").html( '[simply_instagram endpoints="' + endpoints + '" type="' + type + '" size="' + size + '" display="' + display + '"]' );
 		      	jQuery("select[name=type]").attr( "disabled", false );
 		      }
 		    }
@@ -554,6 +552,7 @@ function option_page_simply_instagram()
 		    jQuery("select[name=endpoints]").change(displayVals);
 		    jQuery("select[name=type]").change(displayVals);
 		    jQuery("select[name=size]").change(displayVals);
+		    jQuery("select[name=totalphoto]").change(displayVals);
 		    displayVals();
 	</script>
 	
@@ -601,6 +600,7 @@ function simply_instagram_sc( $atts )
 	 	 *type
 	 		popular
 	*/
+	ob_start();
 	extract( shortcode_atts( array( ), $atts ) );
 	switch( $atts['endpoints'] ):
 		
@@ -622,7 +622,7 @@ function simply_instagram_sc( $atts )
 				*/
 				case'self-feed':
 					echo '<div id="masonryContainer" title="self-feed" class="clearfix masonry">';
-					echo sInstDisplayData( sInstGetSelfFeed( access_token() ), $atts['size'], "20", "150", $customRel );
+					echo sInstDisplayData( sInstGetSelfFeed( access_token() ), $atts['size'], $atts['display'], "150", $customRel );
 					echo '</div>';													
 				break;
 				/**
@@ -631,7 +631,7 @@ function simply_instagram_sc( $atts )
 				*/
 				case'recent-media':
 					echo '<div id="masonryContainer" title="recent-media" class="clearfix masonry">';
-					echo sInstDisplayData( sInstGetRecentMedia( user_id(), access_token() ), $atts['size'], "20", "150", $customRel );
+					echo sInstDisplayData( sInstGetRecentMedia( user_id(), access_token() ), $atts['size'], $atts['display'], "150", $customRel );
 					echo '</div>';	
 				break;
 				/**
@@ -640,7 +640,7 @@ function simply_instagram_sc( $atts )
 				*/
 				case'likes':
 					echo '<div id="masonryContainer" title="likes" class="clearfix masonry">';
-					echo sInstDisplayData( sInstGetLikes( access_token() ), $atts['size'], "20", "150", $customRel );	
+					echo sInstDisplayData( sInstGetLikes( access_token() ), $atts['size'], $atts['display'], "150", $customRel );	
 					echo '</div>';		
 				break;
 				
@@ -655,9 +655,11 @@ function simply_instagram_sc( $atts )
 			 * Media endpoint only accept currently
 			 * trending photos in Instagram
 			*/
-			echo '<div id="masonryContainer" title="media" class="clearfix masonry">'; 
-			echo  sInstDisplayData( sInstGetMostPopular( $atts['type'], access_token() ), $atts['size'], "20", "150", $customRel );
+			
+			echo '<div id="masonryContainer" title="media" class="clearfix masonry">';
+			echo sInstDisplayData( sInstGetMostPopular( $atts['type'], access_token() ), $atts['size'], $atts['display'], "150", $customRel );
 			echo '</div>';		
+			
 		break;
 		
 	endswitch;
@@ -753,7 +755,7 @@ function simply_instagram_sc( $atts )
 	  });
 	</script>
 	<?php	
-			
+	$content = ob_get_contents();ob_end_clean();wp_reset_postdata();return $content;	
 }
 /**
 * Register with instagram shortcode

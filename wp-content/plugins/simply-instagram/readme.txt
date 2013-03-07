@@ -3,8 +3,8 @@ Contributors: rollybueno
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BUDCX2S6SJ3ZG
 Tags: instagram, instagram images, instagram gallery, photos, widgets, gallery
 Requires at least: 3.0
-Tested up to: 3.4.1
-Stable tag: 1.2.3
+Tested up to: 3.5.1
+Stable tag: 1.2.4
 
 Simply Instagram displays your photos from Instagram either using Widget or Short Code.
 
@@ -51,7 +51,8 @@ Attributes:
 		a.) Thumbnail - Thumbnail size of photo. Exactly 150 x 150.
 		b.) Low Resolution - Exactly 306 x 306. This value is the default for Simply Instagram Wordpress Plugin.
 		c.) Standard Resolution - The largest image with highest quality. Dimension is 612 x 612.
-
+	
+	4.) Display - Determine how many photos to be shown. Maximum of 20 photos are allowed.
 
 == Screenshots ==
 
@@ -108,19 +109,29 @@ If no access token have recorded, your follower( a person who decides to follow 
 
 When your follower were redirect to 404 page after login to Instagram for following you, the plugin can't read your URL. Kindly add forward slash to your permalinks settings.
 
-= What's the difference of Slideshow, Single Media Viewer and Simply Instagram Built In Media Viewer? =
+= I received an error "the page you're looking for doesn't exist. Try the menu." when authorizing =
 
-Slideshow is for viewing all Instagram photos in a slideshow manner as the title say it. Single Media Viewer and Simply Instagram Built In Media Viewer are pretty much the same except Single Media Viewer is powered by prettyPhoto still.
-
-= My site crashed and the browser stops responding =
-
-This is the common complain the developer received from back-end users. It is because the prettyPhoto can't handle long photo caption and will become unresponsive script to browsers and worst, the browser stops working without any error message. If your site experiencing this bug, kindly set "Display photo description" to "No" in admin settings under PrettyPhoto Settings box.
+If this thing happens, simply because Rollybueno.info( which is my official website ) delay in responding. You can go back to admin menu and retry after few minutes.
 
 == Other Notes ==
+
+For using shortcode, please refer to shortcode documentation. Important tips in using shortcode attributes: 
+
+* All attributes must be in lowercase.
+* All two string attributes must use dash( - ) except photo resolution which use unserscore( _ ). Sample "recent-media" or "low_resolution".
+
+Please follow the tips in order the shortcode to work.
 
 If you have patch for the improvement of this plugin or you have suggestion for added features, kindly inform me using Support forum. I'm glad to include that in next release and I will credit you.
 
 == Changelog ==
+
+= 1.2.4 =
+
+* Update Media viewer css
+* Fix bug on number of photo to be displayed
+* Fix bug on “Show Description” option
+* Update proper shortcode method
 
 = 1.2.3 =
 
@@ -128,7 +139,7 @@ If you have patch for the improvement of this plugin or you have suggestion for 
 * Update follow button css.
 * Added personalize media viewer.
 * Added option to use prettyPhoto or built-in media viewer.
-* Added option to display photo’s statistics, caption and photographer.
+* Added option to display photo?s statistics, caption and photographer.
 * Added flexible admin setting.
 * Added shortcode generator.
 * Added option to display photo caption when using prettyPhoto slideshow. A major drawback for Simply Instagram earlier version is prettyPhoto inability to handle long photo caption.

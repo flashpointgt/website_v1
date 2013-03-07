@@ -252,6 +252,7 @@ function sInstGetFollowingInfo( $user_id, $access_token )
 */
 function sInstDisplayData( $data, $size='low_resolution', $display="20", $width="150", $customRel="sIntWid" )
 {	
+	
 	/**
 	 * Determine query return
 	 * next query used to avoid
@@ -295,7 +296,7 @@ function sInstDisplayData( $data, $size='low_resolution', $display="20", $width=
 				 /**
 				  * Determine if displayDescription is allowed
 				 */
-				 get_option( 'displayDescription' ) == true ? $output .= '<p>' . htmlspecialchars( $data['data'][$i]['caption']['text'], ENT_QUOTES ) . '</p>' : null ;
+				 get_option( 'displayDescription' ) == "true" ? $output .= '<p>' . htmlspecialchars( $data['data'][$i]['caption']['text'], ENT_QUOTES ) . '</p>' : null ;
 				 
 				  /**
 				  * Determine if displayStatistic is allowed
@@ -408,7 +409,7 @@ function sInstDisplayData( $data, $size='low_resolution', $display="20", $width=
 				 /**
 				  * Determine if displayDescription is allowed
 				 */
-				 get_option( 'displayDescription' ) == true ? $output .= '<p>' . htmlspecialchars( $data['data'][$i]['caption']['text'], ENT_QUOTES ) . '</p>' : null ;
+				 get_option( 'displayDescription' ) == "true" ? $output .= '<p>' . htmlspecialchars( $data['data'][$i]['caption']['text'], ENT_QUOTES ) . '</p>' : null ;
 				 
 				  /**
 				  * Determine if displayStatistic is allowed
@@ -484,7 +485,7 @@ function sInstDisplayData( $data, $size='low_resolution', $display="20", $width=
 				 /**
 				  * Determine if displayDescription is allowed
 				 */
-				 get_option( 'displayDescription' ) == true ? $output .= '<p>' . htmlspecialchars( $data['data'][$i]['caption']['text'], ENT_QUOTES ) . '</p>' : null ;
+				 get_option( 'displayDescription' ) == "true" ? $output .= '<p>' . htmlspecialchars( $data['data'][$i]['caption']['text'], ENT_QUOTES ) . '</p>' : null ;
 				 
 				  /**
 				  * Determine if displayStatistic is allowed
@@ -588,6 +589,7 @@ function sInstDisplayData( $data, $size='low_resolution', $display="20", $width=
 			
 			//print_r( $content );
 		endif; */
+		
 }
 
 function sInstDiplayFollowData( $data, $display="20", $width="150", $showFollowerData = false )
