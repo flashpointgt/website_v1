@@ -18,17 +18,10 @@
 /** The name of the database for WordPress */
 $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
 
-define('DB_NAME', $url['host']);
-
-/** MySQL database username */
+define('DB_HOST', $url['host']);
 define('DB_USER', $url['user']);
-
-/** MySQL database password */
 define('DB_PASSWORD', $url['pass']);
-
-/** MySQL hostname */
-define('DB_HOST', substr($url['path'], 1));
-
+define('DB_NAME', substr($url['path'], 1));
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
