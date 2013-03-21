@@ -16,7 +16,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-$url = parse_url(getenv('CLEARDB_DATABASE_URL_A'));
+$url = parse_url(getenv('CLEARDB_DATABASE_URL'));
 
 define('DB_NAME', $url['host']);
 
