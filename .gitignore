@@ -1,5 +1,4 @@
 
-wp-config.php
 wp-content/uploads
 wp-content/upgrade
 wp-content/themes/flashpoint/images
@@ -7,3 +6,4 @@ wp-content/themes/flashpoint/images
 .DS_Store
 sftp-config.json
 remote.txt
+
