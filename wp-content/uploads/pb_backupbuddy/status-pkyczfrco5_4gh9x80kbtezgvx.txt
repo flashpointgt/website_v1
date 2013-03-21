@@ -1,0 +1,10 @@
+1363023254|~|0.18|~|33.28|~|details|~|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1363023254|~|0.19|~|33.28|~|details|~|Set memory limit to 256M. Previous value < 256M.
+1363023254|~|0.19|~|33.28|~|details|~|Original PHP memory limit: 128; New: 256M.
+1363023254|~|0.19|~|33.28|~|message|~|Processing cron step for serial `pkyczfrco5`...
+1363023254|~|0.21|~|34.61|~|details|~|Using cached zipbuddy classic methods: `exec,ziparchive,pclzip`.
+1363023254|~|0.21|~|34.61|~|details|~|Using cached zipbuddy classic exec path: ``.
+1363023254|~|0.21|~|34.61|~|details|~|Running process_backup() for serial `pkyczfrco5`.
+1363023254|~|0.22|~|34.61|~|details|~|cron_process_scheduled_backup: 100
+1363023254|~|0.22|~|34.61|~|details|~|Testing loopback connections by connecting back to site at the URL: `http://flashpoint.ei2.org/wp-admin/admin-ajax.php`. It should display simply "0" or "-1" in the body.
+1363023255|~|0.63|~|34.61|~|details|~|HTTP Loopback test success. Returned `0`.

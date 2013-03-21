@@ -1,0 +1,30 @@
+1363024017|~|0.64|~|36.23|~|details|~|BackupBuddy v3.1.8.1 using WordPress v3.5.1 on Linux.
+1363024017|~|0.66|~|36.23|~|details|~|Performing pre-backup procedures.
+1363024017|~|0.66|~|36.23|~|message|~|Full backup mode.
+1363024017|~|0.66|~|36.23|~|details|~|Backup serial generated: `ijar5xry0q`.
+1363024017|~|0.66|~|36.23|~|details|~|Resetting statistics for last backup time and number of edits since last backup.
+1363024017|~|0.66|~|36.23|~|details|~|mysqlbuddy: Calculating tables to backup. Next three lines:
+1363024017|~|0.67|~|36.23|~|details|~|Base dump mode (before inclusions/exclusions): `prefix`.
+1363024017|~|0.67|~|36.23|~|details|~|mysqlbuddy: Base tables (45 tables): `wp_bb_forums,wp_bb_meta,wp_bb_posts,wp_bb_term_relationships,wp_bb_term_taxonomy,wp_bb_terms,wp_bb_topics,wp_bp_activity,wp_bp_activity_meta,wp_bp_friends,wp_bp_groups,wp_bp_groups_groupmeta,wp_bp_groups_members,wp_bp_messages_messages,wp_bp_messages_notices,wp_bp_messages_recipients,wp_bp_notifications,wp_bp_user_blogs,wp_bp_user_blogs_blogmeta,wp_bp_xprofile_data,wp_bp_xprofile_fields,wp_bp_xprofile_groups,wp_bp_xprofile_meta,wp_commentmeta,wp_comments,wp_dynamic_widgets,wp_eab_booking_meta,wp_eab_bookings,wp_instagram,wp_links,wp_options,wp_postmeta,wp_posts,wp_rg_form,wp_rg_form_meta,wp_rg_form_view,wp_rg_lead,wp_rg_lead_detail,wp_rg_lead_detail_long,wp_rg_lead_notes,wp_term_relationships,wp_term_taxonomy,wp_terms,wp_usermeta,wp_users`
+1363024017|~|0.67|~|36.23|~|details|~|mysqlbuddy: After addition (45 tables): `wp_bb_forums,wp_bb_meta,wp_bb_posts,wp_bb_term_relationships,wp_bb_term_taxonomy,wp_bb_terms,wp_bb_topics,wp_bp_activity,wp_bp_activity_meta,wp_bp_friends,wp_bp_groups,wp_bp_groups_groupmeta,wp_bp_groups_members,wp_bp_messages_messages,wp_bp_messages_notices,wp_bp_messages_recipients,wp_bp_notifications,wp_bp_user_blogs,wp_bp_user_blogs_blogmeta,wp_bp_xprofile_data,wp_bp_xprofile_fields,wp_bp_xprofile_groups,wp_bp_xprofile_meta,wp_commentmeta,wp_comments,wp_dynamic_widgets,wp_eab_booking_meta,wp_eab_bookings,wp_instagram,wp_links,wp_options,wp_postmeta,wp_posts,wp_rg_form,wp_rg_form_meta,wp_rg_form_view,wp_rg_lead,wp_rg_lead_detail,wp_rg_lead_detail_long,wp_rg_lead_notes,wp_term_relationships,wp_term_taxonomy,wp_terms,wp_usermeta,wp_users`
+1363024017|~|0.67|~|36.23|~|details|~|mysqlbuddy: After exclusion (45 tables): `wp_bb_forums,wp_bb_meta,wp_bb_posts,wp_bb_term_relationships,wp_bb_term_taxonomy,wp_bb_terms,wp_bb_topics,wp_bp_activity,wp_bp_activity_meta,wp_bp_friends,wp_bp_groups,wp_bp_groups_groupmeta,wp_bp_groups_members,wp_bp_messages_messages,wp_bp_messages_notices,wp_bp_messages_recipients,wp_bp_notifications,wp_bp_user_blogs,wp_bp_user_blogs_blogmeta,wp_bp_xprofile_data,wp_bp_xprofile_fields,wp_bp_xprofile_groups,wp_bp_xprofile_meta,wp_commentmeta,wp_comments,wp_dynamic_widgets,wp_eab_booking_meta,wp_eab_bookings,wp_instagram,wp_links,wp_options,wp_postmeta,wp_posts,wp_rg_form,wp_rg_form_meta,wp_rg_form_view,wp_rg_lead,wp_rg_lead_detail,wp_rg_lead_detail_long,wp_rg_lead_notes,wp_term_relationships,wp_term_taxonomy,wp_terms,wp_usermeta,wp_users`
+1363024017|~|0.69|~|36.23|~|details|~|Breaking out tables DISABLED based on settings.
+1363024017|~|0.72|~|36.23|~|details|~|Creating DAT (data) file snapshotting site & backup information.
+1363024017|~|0.72|~|36.23|~|details|~|wp-config.php found in normal location.
+1363024017|~|0.72|~|36.23|~|details|~|Finished creating DAT (data) file.
+1363024017|~|0.72|~|36.23|~|details|~|Generating ImportBuddy tool to include in backup archive: `/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_temp/ijar5xry0q/importbuddy.php`.
+1363024017|~|0.72|~|36.23|~|details|~|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1363024017|~|0.72|~|36.23|~|details|~|Set memory limit to 256M. Previous value < 256M.
+1363024017|~|0.73|~|36.23|~|details|~|Original PHP memory limit: 128; New: 256M.
+1363024017|~|0.73|~|36.23|~|warning|~|Error #9032: Warning only - You have not set a password to generate the ImportBuddy script yet on the BackupBuddy Settings page. If you are creating a backup, the importbuddy.php restore script will not be included in the backup. You can download it from the Restore page.  If you were trying to download ImportBuddy then you may have a plugin confict preventing the page from prompting you to enter a password.
+1363024017|~|0.73|~|36.23|~|details|~|ImportBuddy generation complete.
+1363024017|~|0.73|~|36.25|~|details|~|Finished pre-backup procedures.
+1363024017|~|0.73|~|36.25|~|action|~|finish_settings
+1363024017|~|0.73|~|36.25|~|message|~|Running in modern backup mode based on settings. Mode value: `2`. Trigger: `scheduled`.
+1363024017|~|0.73|~|36.25|~|details|~|Scheduling Cron for `ijar5xry0q`.
+1363024017|~|0.73|~|36.25|~|details|~|Loading DB kicker in case database has gone away.
+1363024017|~|0.73|~|36.25|~|details|~|Database Server connection status verified.
+1363024017|~|0.73|~|36.25|~|details|~|Database seems to still be connected.
+1363024017|~|0.74|~|36.25|~|details|~|Scheduling next step to run at `1363024017` with cron tag `pb_backupbuddy_process_backup` and serial arguments `ijar5xry0q`. If the backup stalls at this point check the Server Information page cron section to see if a step with these values is listed to determine if the problem is with scheduling the next step or the next step is scheduled but not running.
+1363024017|~|0.74|~|36.25|~|details|~|Next step scheduled in cron.
+1363024017|~|0.74|~|36.25|~|details|~|Finished cron_process_scheduled_backup.

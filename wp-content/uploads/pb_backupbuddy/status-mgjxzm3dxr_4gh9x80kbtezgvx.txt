@@ -1,0 +1,220 @@
+1363197450|~|0.89|~|36.33|~|details|~|BackupBuddy v3.1.8.1 using WordPress v3.5.1 on Linux.
+1363197450|~|0.90|~|36.33|~|details|~|Performing pre-backup procedures.
+1363197450|~|0.90|~|36.33|~|message|~|Full backup mode.
+1363197450|~|0.90|~|36.33|~|details|~|Backup serial generated: `mgjxzm3dxr`.
+1363197450|~|0.90|~|36.33|~|details|~|Resetting statistics for last backup time and number of edits since last backup.
+1363197450|~|0.90|~|36.33|~|details|~|mysqlbuddy: Calculating tables to backup. Next three lines:
+1363197450|~|0.90|~|36.33|~|details|~|Base dump mode (before inclusions/exclusions): `prefix`.
+1363197450|~|0.90|~|36.33|~|details|~|mysqlbuddy: Base tables (45 tables): `wp_bb_forums,wp_bb_meta,wp_bb_posts,wp_bb_term_relationships,wp_bb_term_taxonomy,wp_bb_terms,wp_bb_topics,wp_bp_activity,wp_bp_activity_meta,wp_bp_friends,wp_bp_groups,wp_bp_groups_groupmeta,wp_bp_groups_members,wp_bp_messages_messages,wp_bp_messages_notices,wp_bp_messages_recipients,wp_bp_notifications,wp_bp_user_blogs,wp_bp_user_blogs_blogmeta,wp_bp_xprofile_data,wp_bp_xprofile_fields,wp_bp_xprofile_groups,wp_bp_xprofile_meta,wp_commentmeta,wp_comments,wp_dynamic_widgets,wp_eab_booking_meta,wp_eab_bookings,wp_instagram,wp_links,wp_options,wp_postmeta,wp_posts,wp_rg_form,wp_rg_form_meta,wp_rg_form_view,wp_rg_lead,wp_rg_lead_detail,wp_rg_lead_detail_long,wp_rg_lead_notes,wp_term_relationships,wp_term_taxonomy,wp_terms,wp_usermeta,wp_users`
+1363197450|~|0.97|~|36.33|~|details|~|mysqlbuddy: After addition (45 tables): `wp_bb_forums,wp_bb_meta,wp_bb_posts,wp_bb_term_relationships,wp_bb_term_taxonomy,wp_bb_terms,wp_bb_topics,wp_bp_activity,wp_bp_activity_meta,wp_bp_friends,wp_bp_groups,wp_bp_groups_groupmeta,wp_bp_groups_members,wp_bp_messages_messages,wp_bp_messages_notices,wp_bp_messages_recipients,wp_bp_notifications,wp_bp_user_blogs,wp_bp_user_blogs_blogmeta,wp_bp_xprofile_data,wp_bp_xprofile_fields,wp_bp_xprofile_groups,wp_bp_xprofile_meta,wp_commentmeta,wp_comments,wp_dynamic_widgets,wp_eab_booking_meta,wp_eab_bookings,wp_instagram,wp_links,wp_options,wp_postmeta,wp_posts,wp_rg_form,wp_rg_form_meta,wp_rg_form_view,wp_rg_lead,wp_rg_lead_detail,wp_rg_lead_detail_long,wp_rg_lead_notes,wp_term_relationships,wp_term_taxonomy,wp_terms,wp_usermeta,wp_users`
+1363197450|~|0.98|~|36.33|~|details|~|mysqlbuddy: After exclusion (45 tables): `wp_bb_forums,wp_bb_meta,wp_bb_posts,wp_bb_term_relationships,wp_bb_term_taxonomy,wp_bb_terms,wp_bb_topics,wp_bp_activity,wp_bp_activity_meta,wp_bp_friends,wp_bp_groups,wp_bp_groups_groupmeta,wp_bp_groups_members,wp_bp_messages_messages,wp_bp_messages_notices,wp_bp_messages_recipients,wp_bp_notifications,wp_bp_user_blogs,wp_bp_user_blogs_blogmeta,wp_bp_xprofile_data,wp_bp_xprofile_fields,wp_bp_xprofile_groups,wp_bp_xprofile_meta,wp_commentmeta,wp_comments,wp_dynamic_widgets,wp_eab_booking_meta,wp_eab_bookings,wp_instagram,wp_links,wp_options,wp_postmeta,wp_posts,wp_rg_form,wp_rg_form_meta,wp_rg_form_view,wp_rg_lead,wp_rg_lead_detail,wp_rg_lead_detail_long,wp_rg_lead_notes,wp_term_relationships,wp_term_taxonomy,wp_terms,wp_usermeta,wp_users`
+1363197450|~|1.59|~|36.33|~|details|~|Breaking out tables DISABLED based on settings.
+1363197450|~|1.61|~|36.33|~|details|~|Creating DAT (data) file snapshotting site & backup information.
+1363197450|~|1.63|~|36.33|~|details|~|wp-config.php found in normal location.
+1363197450|~|1.63|~|36.33|~|details|~|Finished creating DAT (data) file.
+1363197450|~|1.63|~|36.33|~|details|~|Generating ImportBuddy tool to include in backup archive: `/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_temp/mgjxzm3dxr/importbuddy.php`.
+1363197450|~|1.64|~|36.33|~|details|~|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1363197450|~|1.64|~|36.33|~|details|~|Set memory limit to 256M. Previous value < 256M.
+1363197450|~|1.64|~|36.33|~|details|~|Original PHP memory limit: 128; New: 256M.
+1363197450|~|1.64|~|36.33|~|warning|~|Error #9032: Warning only - You have not set a password to generate the ImportBuddy script yet on the BackupBuddy Settings page. If you are creating a backup, the importbuddy.php restore script will not be included in the backup. You can download it from the Restore page.  If you were trying to download ImportBuddy then you may have a plugin confict preventing the page from prompting you to enter a password.
+1363197450|~|1.64|~|36.33|~|details|~|ImportBuddy generation complete.
+1363197450|~|1.64|~|36.46|~|details|~|Finished pre-backup procedures.
+1363197450|~|1.64|~|36.46|~|action|~|finish_settings
+1363197450|~|1.64|~|36.46|~|message|~|Running in modern backup mode based on settings. Mode value: `2`. Trigger: `scheduled`.
+1363197450|~|1.65|~|36.46|~|details|~|Scheduling Cron for `mgjxzm3dxr`.
+1363197450|~|1.65|~|36.46|~|details|~|Loading DB kicker in case database has gone away.
+1363197450|~|1.67|~|36.46|~|details|~|Database Server connection status verified.
+1363197450|~|1.67|~|36.46|~|details|~|Database seems to still be connected.
+1363197450|~|1.68|~|36.46|~|details|~|Scheduling next step to run at `1363197450` with cron tag `pb_backupbuddy_process_backup` and serial arguments `mgjxzm3dxr`. If the backup stalls at this point check the Server Information page cron section to see if a step with these values is listed to determine if the problem is with scheduling the next step or the next step is scheduled but not running.
+1363197450|~|1.71|~|36.46|~|details|~|Next step scheduled in cron.
+1363197450|~|1.73|~|36.46|~|details|~|Finished cron_process_scheduled_backup.
+1363197452|~|0.19|~|34.03|~|details|~|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1363197452|~|0.20|~|34.03|~|details|~|Set memory limit to 256M. Previous value < 256M.
+1363197452|~|0.20|~|34.03|~|details|~|Original PHP memory limit: 128; New: 256M.
+1363197452|~|0.20|~|34.03|~|message|~|Processing cron step for serial `mgjxzm3dxr`...
+1363197452|~|0.22|~|34.74|~|details|~|Using cached zipbuddy classic methods: `exec,ziparchive,pclzip`.
+1363197452|~|0.22|~|34.74|~|details|~|Using cached zipbuddy classic exec path: ``.
+1363197452|~|0.22|~|34.74|~|details|~|Running process_backup() for serial `mgjxzm3dxr`.
+1363197452|~|0.23|~|34.96|~|details|~|Found next step to run: `backup_create_database_dump`.
+1363197452|~|0.24|~|35.01|~|details|~|Peak memory usage: 35.013 MB
+1363197452|~|0.24|~|35.01|~|details|~|Starting step function `backup_create_database_dump` with args `{wp_bb_forums,wp_bb_meta,wp_bb_posts,wp_bb_term_relationships,wp_bb_term_taxonomy,wp_bb_terms,wp_bb_topics,wp_bp_activity,wp_bp_activity_meta,wp_bp_friends,wp_bp_groups,wp_bp_groups_groupmeta,wp_bp_groups_members,wp_bp_messages_messages,wp_bp_messages_notices,wp_bp_messages_recipients,wp_bp_notifications,wp_bp_user_blogs,wp_bp_user_blogs_blogmeta,wp_bp_xprofile_data,wp_bp_xprofile_fields,wp_bp_xprofile_groups,wp_bp_xprofile_meta,wp_commentmeta,wp_comments,wp_dynamic_widgets,wp_eab_booking_meta,wp_eab_bookings,wp_instagram,wp_links,wp_options,wp_postmeta,wp_posts,wp_rg_form,wp_rg_form_meta,wp_rg_form_view,wp_rg_lead,wp_rg_lead_detail,wp_rg_lead_detail_long,wp_rg_lead_notes,wp_term_relationships,wp_term_taxonomy,wp_terms,wp_usermeta,wp_users},` now (1363197452).
+1363197452|~|0.24|~|35.01|~|action|~|start_database
+1363197452|~|0.24|~|35.01|~|message|~|Starting database backup process.
+1363197452|~|0.24|~|35.01|~|message|~|Using auto-detected database dump method(s) based on settings.
+1363197452|~|0.27|~|35.07|~|details|~|mysqlbuddy: Database host: `localhost`
+1363197452|~|0.28|~|35.07|~|details|~|mysqlbuddy: Loading mysqldump library.
+1363197452|~|0.29|~|35.07|~|details|~|mysqlbuddy: Mysql default directories: `/usr/bin/,/usr/bin/mysql/,/usr/local/bin/`
+1363197452|~|0.29|~|35.07|~|details|~|mysqlbuddy: Force method sound of `0` passed.
+1363197452|~|0.29|~|35.07|~|message|~|mysqlbuddy: Method not forced. About to detect directory and available methods.
+1363197452|~|0.29|~|35.07|~|details|~|mysqlbuddy: Attempting to calculate exact mysql directory.
+1363197452|~|0.29|~|35.07|~|details|~|mysqlbuddy: Mysql reported its directory. Reported: `/usr`; Adding binary location to beginning of mysql directory list: `/usr/bin/`
+1363197452|~|0.29|~|35.07|~|details|~|mysqldump test: Testing available mysql database dump methods.
+1363197452|~|0.29|~|35.07|~|details|~|mysqldump test: exec() function exists. Testing running mysqldump via exec().
+1363197452|~|0.29|~|35.07|~|details|~|mysqldump test running next.
+1363197452|~|0.29|~|35.07|~|details|~|exec_dir not detected. Proceeding normally.
+1363197452|~|0.29|~|35.07|~|details|~|exec() command `PATH=$PATH:/usr/bin/:/usr/local/bin/:usr/local/bin:/usr/local/sbin/:/usr/sbin/:/sbin/:/usr/:/bin/; /usr/bin/mysqldump --version  2>&1` (with path definition).
+1363197453|~|0.30|~|35.07|~|details|~|exec() command output: `mysqldump  Ver 10.11 Distrib 5.0.91, for unknown-linux-gnu (x86_64)`; Exit code: `0`; Exit code description: `Command completed & returned normally.`
+1363197453|~|0.31|~|35.07|~|details|~|mysqldump test: Command appears to be accessible and returns expected response.
+1363197453|~|0.34|~|35.07|~|message|~|mysqlbuddy: Detected database dump methods: `commandline,php`.
+1363197453|~|0.34|~|35.07|~|action|~|start_database
+1363197453|~|0.35|~|35.07|~|message|~|Starting database dump procedure.
+1363197453|~|0.36|~|35.07|~|details|~|mysqlbuddy: Output directory: `/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_temp/mgjxzm3dxr/`.
+1363197453|~|0.36|~|35.07|~|details|~|Table dump count: `45`.
+1363197453|~|0.36|~|35.07|~|details|~|Preparing to dump using available method(s) by priority. Methods: `commandline,php`
+1363197453|~|0.36|~|35.07|~|details|~|mysqlbuddy: Attempting dump method `commandline`.
+1363197453|~|0.36|~|35.07|~|details|~|mysqlbuddy: Preparing to run command line mysqldump via exec().
+1363197453|~|0.36|~|35.07|~|details|~|mysqlbuddy: Command length: `1016`.
+1363197453|~|0.36|~|35.07|~|details|~|mysqlbuddy: Command line length of `1016` (bytes) is large enough ( >250 ) to verify compatibility. Checking maximum allowed command line length for this sytem.
+1363197453|~|0.36|~|35.07|~|details|~|exec_dir not detected. Proceeding normally.
+1363197453|~|0.38|~|35.07|~|details|~|exec() command `PATH=$PATH:/usr/bin/:/usr/local/bin/:usr/local/bin:/usr/local/sbin/:/usr/sbin/:/sbin/:/usr/:/bin/; echo $(( $(getconf ARG_MAX) - $(env | wc -c) ))` (with path definition).
+1363197453|~|0.39|~|35.07|~|details|~|exec() command output: `-1021`; Exit code: `0`; Exit code description: `Command completed & returned normally.`
+1363197453|~|0.39|~|35.07|~|details|~|mysqlbuddy: Command output: `-1021`; Exit code: `0`; Exit code description: `Command completed & returned normally.`
+1363197453|~|0.39|~|35.07|~|details|~|mysqlbuddy: Detected maximum command line length for this system: `-1021`.
+1363197453|~|0.39|~|35.07|~|details|~|mysqlbuddy: This system's maximum command line length of `-1021` is shorter than command length of `1016`. Falling back into compatibility mode to insure database dump integrity.
+1363197453|~|0.39|~|35.07|~|details|~|mysqlbuddy: Running dump via commandline next.
+1363197453|~|0.39|~|35.07|~|details|~|exec_dir not detected. Proceeding normally.
+1363197453|~|0.40|~|35.07|~|details|~|exec() command (password hidden) `PATH=$PATH:/usr/bin/:/usr/local/bin/:usr/local/bin:/usr/local/sbin/:/usr/sbin/:/sbin/:/usr/:/bin/; /usr/bin/mysqldump --host=localhost --user=gtinnova_newfp --password=*HIDDEN* --skip-opt --quick --disable-keys --skip-comments --create-options  gtinnova_newfp wp_bb_forums wp_bb_meta wp_bb_posts wp_bb_term_relationships wp_bb_term_taxonomy wp_bb_terms wp_bb_topics wp_bp_activity wp_bp_activity_meta wp_bp_friends wp_bp_groups wp_bp_groups_groupmeta wp_bp_groups_members wp_bp_messages_messages wp_bp_messages_notices wp_bp_messages_recipients wp_bp_notifications wp_bp_user_blogs wp_bp_user_blogs_blogmeta wp_bp_xprofile_data wp_bp_xprofile_fields wp_bp_xprofile_groups wp_bp_xprofile_meta wp_commentmeta wp_comments wp_dynamic_widgets wp_eab_booking_meta wp_eab_bookings wp_instagram wp_links wp_options wp_postmeta wp_posts wp_rg_form wp_rg_form_meta wp_rg_form_view wp_rg_lead wp_rg_lead_detail wp_rg_lead_detail_long wp_rg_lead_notes wp_term_relationships wp_term_taxonomy wp_terms wp_usermeta wp_users >> /home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_temp/mgjxzm3dxr/db_1.sql` (with path definition).
+1363197453|~|0.64|~|35.07|~|details|~|exec() command output: ``; Exit code: `0`; Exit code description: `Command completed & returned normally.`
+1363197453|~|0.64|~|35.07|~|details|~|mysqlbuddy: Command appears to succeeded and returned proper response.
+1363197453|~|0.64|~|35.07|~|message|~|mysqlbuddy: Database dump SQL file exists.
+1363197453|~|0.65|~|35.07|~|details|~|Final SQL database dump file size of `db_1.sql`: 2.1 MB.
+1363197453|~|0.66|~|35.07|~|details|~|mysqlbuddy: Dump method `commandline` completed successfully.
+1363197453|~|0.68|~|35.07|~|action|~|finish_database
+1363197453|~|0.68|~|35.07|~|message|~|Database dump procedure succeeded.
+1363197453|~|0.71|~|35.25|~|details|~|Finished function `backup_create_database_dump`.
+1363197453|~|0.72|~|35.25|~|details|~|Peak memory usage: 35.246 MB
+1363197453|~|0.72|~|35.25|~|details|~|Scheduling Cron for `mgjxzm3dxr`.
+1363197453|~|0.72|~|35.25|~|details|~|Loading DB kicker in case database has gone away.
+1363197453|~|0.72|~|35.25|~|details|~|Database Server connection status verified.
+1363197453|~|0.72|~|35.25|~|details|~|Database seems to still be connected.
+1363197453|~|0.72|~|35.25|~|details|~|Scheduling next step to run at `1363197453` with cron tag `pb_backupbuddy_process_backup` and serial arguments `mgjxzm3dxr`. If the backup stalls at this point check the Server Information page cron section to see if a step with these values is listed to determine if the problem is with scheduling the next step or the next step is scheduled but not running.
+1363197453|~|0.73|~|35.25|~|details|~|Next step scheduled in cron.
+1363197453|~|0.73|~|35.25|~|details|~|Completed step function `backup_create_database_dump` now (1363197453).
+1363197453|~|0.73|~|35.25|~|details|~|The next should run in a moment. If it does not please check for plugin conflicts and that the next step is scheduled in the cron on the Server Information page.
+1363197468|~|0.16|~|33.44|~|details|~|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1363197468|~|0.16|~|33.44|~|details|~|Set memory limit to 256M. Previous value < 256M.
+1363197468|~|0.16|~|33.44|~|details|~|Original PHP memory limit: 128; New: 256M.
+1363197468|~|0.16|~|33.44|~|message|~|Processing cron step for serial `mgjxzm3dxr`...
+1363197468|~|0.18|~|34.73|~|details|~|Using cached zipbuddy classic methods: `exec,ziparchive,pclzip`.
+1363197468|~|0.18|~|34.73|~|details|~|Using cached zipbuddy classic exec path: ``.
+1363197468|~|0.18|~|34.73|~|details|~|Running process_backup() for serial `mgjxzm3dxr`.
+1363197468|~|0.18|~|34.95|~|details|~|Found next step to run: `backup_zip_files`.
+1363197468|~|0.18|~|35.01|~|details|~|Peak memory usage: 35.007 MB
+1363197468|~|0.18|~|35.01|~|details|~|Starting step function `backup_zip_files` with args `` now (1363197468).
+1363197468|~|0.19|~|35.01|~|action|~|start_files
+1363197468|~|0.19|~|35.01|~|details|~|Backup root: `/home/gtinnova/public_html/flashpoint.ei2.org/`.
+1363197468|~|0.19|~|35.01|~|details|~|Using all available zip methods in preferred order.
+1363197468|~|0.19|~|35.01|~|details|~|Creating ZIP file `/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/backup-flashpoint_ei2_org-2013_03_13-full-mgjxzm3dxr.zip`. Adding directory `/home/gtinnova/public_html/flashpoint.ei2.org/`. Compression: 1; Excludes: /wp-content/uploads/backupbuddy_backups,/wp-content/uploads/pb_backupbuddy,/importbuddy,/importbuddy.php
+1363197468|~|0.19|~|35.01|~|details|~|Using exec() method for ZIP.
+1363197468|~|0.20|~|35.01|~|details|~|Creating backup exclusions file `/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_zip_mgjxzm3dxr/exclusions.txt`.
+1363197468|~|0.20|~|35.01|~|details|~|Excluding directory `/wp-content/uploads/backupbuddy_backups/*`.
+1363197468|~|0.20|~|35.01|~|details|~|Excluding directory `/wp-content/uploads/pb_backupbuddy/*`.
+1363197468|~|0.20|~|35.01|~|details|~|Omitting exclusion as file/direcory does not currently exist: `/importbuddy`.
+1363197468|~|0.20|~|35.01|~|details|~|Omitting exclusion as file/direcory does not currently exist: `/importbuddy.php`.
+1363197468|~|0.20|~|35.01|~|details|~|Backup exclusions file created.
+1363197468|~|0.20|~|35.01|~|details|~|Using exclusion file `/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_zip_mgjxzm3dxr/exclusions.txt`.
+1363197468|~|0.20|~|35.01|~|details|~|Exec command (Linux): zip -q -r -b '/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_zip_mgjxzm3dxr/' '/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/backup-flashpoint_ei2_org-2013_03_13-full-mgjxzm3dxr.zip' . -x@/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_zip_mgjxzm3dxr/exclusions.txt 2>&1
+1363197468|~|0.20|~|35.01|~|details|~|exec_dir not detected. Proceeding normally.
+1363197468|~|0.20|~|35.01|~|details|~|exec() command `PATH=$PATH:/usr/bin/:/usr/local/bin/:usr/local/bin:/usr/local/sbin/:/usr/sbin/:/sbin/:/usr/:/bin/; zip -q -r -b '/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_zip_mgjxzm3dxr/' '/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/backup-flashpoint_ei2_org-2013_03_13-full-mgjxzm3dxr.zip' . -x@/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_zip_mgjxzm3dxr/exclusions.txt 2>&1` (with path definition).
+1363197481|~|13.03|~|35.01|~|details|~|exec() command output: ``; Exit code: `0`; Exit code description: `Command completed & returned normally.`
+1363197482|~|14.03|~|35.01|~|message|~|Full speed mode completed & generated ZIP file.
+1363197482|~|14.03|~|35.01|~|message|~|Backup ZIP file successfully created.
+1363197482|~|14.03|~|35.01|~|details|~|Chmod of ZIP file to 0644 succeeded.
+1363197482|~|14.03|~|35.01|~|details|~|Loading DB kicker in case database has gone away.
+1363197482|~|14.03|~|35.01|~|details|~|Database Server has gone away, attempting to reconnect.
+1363197482|~|14.03|~|35.01|~|details|~|Database Server reconnection successful.
+1363197482|~|14.03|~|35.01|~|details|~|Database seems to still be connected.
+1363197482|~|14.04|~|35.03|~|details|~|Finished function `backup_zip_files`.
+1363197482|~|14.04|~|35.03|~|details|~|Peak memory usage: 35.032 MB
+1363197482|~|14.04|~|35.03|~|details|~|Scheduling Cron for `mgjxzm3dxr`.
+1363197482|~|14.04|~|35.03|~|details|~|Loading DB kicker in case database has gone away.
+1363197482|~|14.04|~|35.03|~|details|~|Database Server connection status verified.
+1363197482|~|14.04|~|35.03|~|details|~|Database seems to still be connected.
+1363197482|~|14.04|~|35.03|~|details|~|Scheduling next step to run at `1363197482` with cron tag `pb_backupbuddy_process_backup` and serial arguments `mgjxzm3dxr`. If the backup stalls at this point check the Server Information page cron section to see if a step with these values is listed to determine if the problem is with scheduling the next step or the next step is scheduled but not running.
+1363197482|~|14.05|~|35.03|~|details|~|Next step scheduled in cron.
+1363197482|~|14.07|~|35.03|~|details|~|Completed step function `backup_zip_files` now (1363197482).
+1363197482|~|14.08|~|35.03|~|details|~|The next should run in a moment. If it does not please check for plugin conflicts and that the next step is scheduled in the cron on the Server Information page.
+1363197967|~|0.16|~|33.44|~|details|~|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1363197967|~|0.16|~|33.44|~|details|~|Set memory limit to 256M. Previous value < 256M.
+1363197967|~|0.17|~|33.44|~|details|~|Original PHP memory limit: 128; New: 256M.
+1363197967|~|0.17|~|33.44|~|message|~|Processing cron step for serial `mgjxzm3dxr`...
+1363197967|~|0.18|~|34.73|~|details|~|Zip methods or exec path were not cached; detecting...
+1363197967|~|0.18|~|34.73|~|details|~|Trying exec() in the following paths: `,/usr/bin/,/usr/local/bin/,/usr/local/sbin/,/usr/sbin/,/sbin/,/bin/`
+1363197967|~|0.18|~|34.73|~|details|~|Trying exec() ZIP path: ``.
+1363197967|~|0.18|~|34.73|~|details|~|Zip test exec() command: `zip "/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_5140c00fe4b7c.zip" "/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/plugins/backupbuddy/lib/zipbuddy/zipbuddy.php"  2>&1`
+1363197967|~|0.19|~|34.73|~|details|~|exec_dir not detected. Proceeding normally.
+1363197967|~|0.21|~|34.73|~|details|~|exec() command `PATH=$PATH:/usr/bin/:/usr/local/bin/:usr/local/bin:/usr/local/sbin/:/usr/sbin/:/sbin/:/usr/:/bin/; zip "/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_5140c00fe4b7c.zip" "/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/plugins/backupbuddy/lib/zipbuddy/zipbuddy.php"  2>&1` (with path definition).
+1363197967|~|0.21|~|34.73|~|details|~|exec() command output: `  adding: home/gtinnova/public_html/flashpoint.ei2.org/wp-content/plugins/backupbuddy/lib/zipbuddy/zipbuddy.php (deflated 77%)`; Exit code: `0`; Exit code description: `Command completed & returned normally.`
+1363197967|~|0.22|~|34.73|~|details|~|ZipArchive test passed.
+1363197967|~|0.23|~|36.12|~|details|~|Caching zipbuddy classic methods & exec path for `60` seconds.
+1363197967|~|0.23|~|36.12|~|details|~|Running process_backup() for serial `mgjxzm3dxr`.
+1363197967|~|0.24|~|36.12|~|details|~|Found next step to run: `post_backup`.
+1363197967|~|0.24|~|36.12|~|details|~|Peak memory usage: 36.118 MB
+1363197967|~|0.24|~|36.12|~|details|~|Starting step function `post_backup` with args `` now (1363197967).
+1363197967|~|0.24|~|36.12|~|message|~|Cleaning up after backup.
+1363197967|~|0.24|~|36.12|~|details|~|Removing temp data directory.
+1363197967|~|0.24|~|36.12|~|details|~|Removing temp zip directory.
+1363197967|~|0.24|~|36.12|~|details|~|Trimming old archives (if needed).
+1363197968|~|0.25|~|36.12|~|details|~|Deleting old archive `backup-flashpoint_ei2_org-2013_03_12-full-ere9ohfcqc.zip` due as it causes archives to exceed total number allowed.
+1363197968|~|0.27|~|36.12|~|details|~|Trimmed 1 old archives based on settings archive limits.
+1363197968|~|0.27|~|36.12|~|details|~|Final ZIP file size: 38.88 MB
+1363197968|~|0.27|~|36.12|~|action|~|archive_size^38.88 MB
+1363197968|~|0.27|~|36.12|~|details|~|Sending scheduled backup complete email notification.
+1363197968|~|0.30|~|36.36|~|error|~|Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Wed, 13 Mar 13 18:06:08 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 9 minutes.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+1363197968|~|0.39|~|37.14|~|message|~|Finished cleaning up.
+1363197968|~|0.41|~|37.14|~|action|~|archive_url^backup-flashpoint_ei2_org-2013_03_13-full-mgjxzm3dxr.zip
+1363197968|~|0.43|~|37.34|~|details|~|Finished function `post_backup`.
+1363197968|~|0.44|~|37.34|~|details|~|Peak memory usage: 37.342 MB
+1363197968|~|0.44|~|37.34|~|details|~|Scheduling Cron for `mgjxzm3dxr`.
+1363197968|~|0.44|~|37.34|~|details|~|Loading DB kicker in case database has gone away.
+1363197968|~|0.44|~|37.34|~|details|~|Database Server connection status verified.
+1363197968|~|0.44|~|37.34|~|details|~|Database seems to still be connected.
+1363197968|~|0.44|~|37.34|~|details|~|Scheduling next step to run at `1363197968` with cron tag `pb_backupbuddy_process_backup` and serial arguments `mgjxzm3dxr`. If the backup stalls at this point check the Server Information page cron section to see if a step with these values is listed to determine if the problem is with scheduling the next step or the next step is scheduled but not running.
+1363197968|~|0.44|~|37.34|~|details|~|Next step scheduled in cron.
+1363197968|~|0.44|~|37.34|~|details|~|Completed step function `post_backup` now (1363197968).
+1363197968|~|0.44|~|37.34|~|details|~|The next should run in a moment. If it does not please check for plugin conflicts and that the next step is scheduled in the cron on the Server Information page.
+1363199652|~|0.16|~|33.44|~|details|~|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1363199652|~|0.16|~|33.44|~|details|~|Set memory limit to 256M. Previous value < 256M.
+1363199652|~|0.17|~|33.44|~|details|~|Original PHP memory limit: 128; New: 256M.
+1363199652|~|0.17|~|33.44|~|message|~|Processing cron step for serial `mgjxzm3dxr`...
+1363199652|~|0.19|~|34.73|~|details|~|Zip methods or exec path were not cached; detecting...
+1363199652|~|0.19|~|34.73|~|details|~|Trying exec() in the following paths: `,/usr/bin/,/usr/local/bin/,/usr/local/sbin/,/usr/sbin/,/sbin/,/bin/`
+1363199652|~|0.21|~|34.73|~|details|~|Trying exec() ZIP path: ``.
+1363199652|~|0.21|~|34.73|~|details|~|Zip test exec() command: `zip "/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_5140c6a4b4c29.zip" "/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/plugins/backupbuddy/lib/zipbuddy/zipbuddy.php"  2>&1`
+1363199652|~|0.21|~|34.73|~|details|~|exec_dir not detected. Proceeding normally.
+1363199652|~|0.21|~|34.73|~|details|~|exec() command `PATH=$PATH:/usr/bin/:/usr/local/bin/:usr/local/bin:/usr/local/sbin/:/usr/sbin/:/sbin/:/usr/:/bin/; zip "/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/temp_5140c6a4b4c29.zip" "/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/plugins/backupbuddy/lib/zipbuddy/zipbuddy.php"  2>&1` (with path definition).
+1363199652|~|0.23|~|34.73|~|details|~|exec() command output: `  adding: home/gtinnova/public_html/flashpoint.ei2.org/wp-content/plugins/backupbuddy/lib/zipbuddy/zipbuddy.php (deflated 77%)`; Exit code: `0`; Exit code description: `Command completed & returned normally.`
+1363199652|~|0.23|~|34.73|~|details|~|ZipArchive test passed.
+1363199652|~|0.25|~|36.13|~|details|~|Caching zipbuddy classic methods & exec path for `60` seconds.
+1363199652|~|0.25|~|36.13|~|details|~|Running process_backup() for serial `mgjxzm3dxr`.
+1363199652|~|0.25|~|36.13|~|details|~|Found next step to run: `send_remote_destination`.
+1363199652|~|0.26|~|36.13|~|details|~|Peak memory usage: 36.127 MB
+1363199652|~|0.26|~|36.13|~|details|~|Starting step function `send_remote_destination` with args `1,` now (1363199652).
+1363199652|~|0.26|~|36.13|~|details|~|Sending file to remote destination ID: `1`.
+1363199652|~|0.26|~|36.13|~|details|~|Sending file `/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/backup-flashpoint_ei2_org-2013_03_13-full-mgjxzm3dxr.zip` to remote destination `1` triggered by ``.
+1363199652|~|0.26|~|36.13|~|details|~|Not sending importbuddy.
+1363199652|~|0.26|~|36.13|~|details|~|Initialized `s3` destination.
+1363199652|~|0.26|~|36.13|~|details|~|Sending files `/home/gtinnova/public_html/flashpoint.ei2.org/wp-content/uploads/backupbuddy_backups/backup-flashpoint_ei2_org-2013_03_13-full-mgjxzm3dxr.zip (38.88 MB); ` to destination type `s3` titled `Amazon S3`.
+1363199652|~|0.27|~|36.13|~|details|~|Calling send function.
+1363199652|~|0.27|~|36.69|~|details|~|Instantiated S3 with SSL disabled.
+1363199652|~|0.27|~|36.69|~|details|~|About to create S3 bucket `wpautomaticbackups`.
+1363199653|~|0.52|~|36.69|~|details|~|Bucket created.
+1363199653|~|0.89|~|36.69|~|details|~|Using S3 storage class `STANDARD`.
+1363199653|~|0.89|~|36.69|~|details|~|About to put file to S3.
+1363199659|~|7.44|~|36.69|~|details|~|File put successfully.
+1363199660|~|7.46|~|36.69|~|details|~|SUCCESS sending to Amazon S3! Response: 1
+1363199660|~|7.46|~|36.69|~|details|~|Archive limit of `30` in settings.
+1363199660|~|8.38|~|37.85|~|details|~|Completed send function. Result: `1`.
+1363199660|~|8.39|~|37.85|~|details|~|kick_db()
+1363199660|~|8.39|~|37.85|~|details|~|Loading DB kicker in case database has gone away.
+1363199660|~|8.39|~|37.85|~|details|~|Database Server connection status verified.
+1363199660|~|8.39|~|37.85|~|details|~|Database seems to still be connected.
+1363199660|~|8.39|~|37.85|~|details|~|Remote send SUCCESS.
+1363199660|~|8.41|~|37.85|~|details|~|Finished function `send_remote_destination`.
+1363199660|~|8.41|~|37.85|~|details|~|Peak memory usage: 37.853 MB
+1363199660|~|8.42|~|37.85|~|details|~|No more backup steps remain. Finishing...

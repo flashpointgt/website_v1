@@ -1,0 +1,7 @@
+1363023261|~|0.50|~|33.31|~|details|~|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1363023262|~|1.25|~|33.31|~|details|~|Set memory limit to 256M. Previous value < 256M.
+1363023263|~|1.91|~|33.31|~|details|~|Original PHP memory limit: 128; New: 256M.
+1363023263|~|1.99|~|33.31|~|message|~|Processing cron step for serial `5eahoyj6fb`...
+1363023263|~|2.01|~|34.65|~|details|~|Using cached zipbuddy classic methods: `exec,ziparchive,pclzip`.
+1363023263|~|2.02|~|34.65|~|details|~|Using cached zipbuddy classic exec path: ``.
+1363023263|~|2.03|~|34.65|~|details|~|Running process_backup() for serial `5eahoyj6fb`.

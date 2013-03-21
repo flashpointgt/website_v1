@@ -1,9 +1,18 @@
-
-wp-content/uploads
-wp-content/upgrade
-wp-content/themes/flashpoint/images
-
 .DS_Store
 sftp-config.json
 remote.txt
 
+wp-content/uploads
+wp-config.php
+wp-content/upgrade
+# wp-content/themes/flashpoint/images
+
+
+
+<<<<<<< HEAD
+.DS_Store
+sftp-config.json
+remote.txt
+
+=======
+>>>>>>> 9b31ff610f9f61eb42423141c7c15552ea7bf463

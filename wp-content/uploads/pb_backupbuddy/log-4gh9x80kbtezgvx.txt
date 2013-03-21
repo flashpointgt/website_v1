@@ -1,0 +1,90 @@
+[Mar 11, 2013 17:34:45 0-error] [jayxmzovzn] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Mon, 11 Mar 13 17:34:45 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 30 seconds.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 11, 2013 17:43:02 0-error] [v05f9sxkpw] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Mon, 11 Mar 13 17:43:02 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 2 minutes.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 11, 2013 17:48:04 0-error] [h4zi1ed3xw] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Mon, 11 Mar 13 17:48:04 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 53 seconds.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 11, 2013 17:48:05 0-error] [h4zi1ed3xw] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Mon, 11 Mar 13 17:48:05 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 54 seconds.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 11, 2013 17:48:32 0-error] [h4zi1ed3xw] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Mon, 11 Mar 13 17:48:32 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 1 minute.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 11, 2013 17:48:34 0-error] [h4zi1ed3xw] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Mon, 11 Mar 13 17:48:34 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 1 minute.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 12, 2013 19:45:34 0-error] [ere9ohfcqc] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Tue, 12 Mar 13 19:45:34 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 2 hours.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 13, 2013 18:06:08 0-error] [mgjxzm3dxr] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Wed, 13 Mar 13 18:06:08 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 9 minutes.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 14, 2013 23:08:12 0-error] [7305myu74w] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Thu, 14 Mar 13 23:08:12 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 5 hours.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 15, 2013 22:49:24 0-error] [1anbo7gtea] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Fri, 15 Mar 13 22:49:24 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 21 minutes.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 17, 2013 12:44:17 0-error] [povgy2caki] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Sun, 17 Mar 13 12:44:17 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 19 hours.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 17, 2013 22:12:18 0-error] [7nroxa3yoa] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Sun, 17 Mar 13 22:12:18 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 5 minutes.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 18, 2013 21:49:13 0-error] [x9czkizjxj] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Mon, 18 Mar 13 21:49:13 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 3 hours.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 19, 2013 20:59:31 0-error] [uo59ek0mkh] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Tue, 19 Mar 13 20:59:31 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 3 hours.
+`; recipient(s): `kimberly@innovate.gatech.edu`.
+[Mar 21, 2013 03:45:19 0-error] [boqds08bxh] Sending email schedule notification. Subject: `BackupBuddy Scheduled Backup Complete - http://flashpoint.ei2.org`; body: `A scheduled backup has completed with BackupBuddy v3.1.8.1 on Thu, 21 Mar 13 03:45:19 +0000 for the site http://flashpoint.ei2.org.
+
+Details:
+
+Scheduled backup "Full Backup" completed successfully in 10 hours.
+`; recipient(s): `kimberly@innovate.gatech.edu`.

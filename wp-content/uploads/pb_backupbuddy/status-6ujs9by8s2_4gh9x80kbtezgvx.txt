@@ -1,0 +1,16 @@
+1363023283|~|7.07|~|34.64|~|message|~|Full speed mode completed & generated ZIP file.
+1363023283|~|7.07|~|34.64|~|message|~|Backup ZIP file successfully created.
+1363023283|~|7.07|~|34.64|~|details|~|Chmod of ZIP file to 0644 succeeded.
+1363023283|~|7.07|~|34.64|~|details|~|Loading DB kicker in case database has gone away.
+1363023283|~|7.07|~|34.65|~|details|~|Database Server connection status verified.
+1363023283|~|7.07|~|34.65|~|details|~|Database seems to still be connected.
+1363023283|~|7.09|~|34.65|~|details|~|Finished function `backup_zip_files`.
+1363023283|~|7.12|~|34.65|~|details|~|Peak memory usage: 34.652 MB
+1363023283|~|7.14|~|34.65|~|details|~|Scheduling Cron for `6ujs9by8s2`.
+1363023283|~|7.16|~|34.65|~|details|~|Loading DB kicker in case database has gone away.
+1363023283|~|7.17|~|34.65|~|details|~|Database Server connection status verified.
+1363023283|~|7.17|~|34.65|~|details|~|Database seems to still be connected.
+1363023283|~|7.17|~|34.65|~|details|~|Scheduling next step to run at `1363023283` with cron tag `pb_backupbuddy_process_backup` and serial arguments `6ujs9by8s2`. If the backup stalls at this point check the Server Information page cron section to see if a step with these values is listed to determine if the problem is with scheduling the next step or the next step is scheduled but not running.
+1363023283|~|7.17|~|34.65|~|details|~|Next step scheduled in cron.
+1363023283|~|7.17|~|34.65|~|details|~|Completed step function `backup_zip_files` now (1363023283).
+1363023283|~|7.17|~|34.65|~|details|~|The next should run in a moment. If it does not please check for plugin conflicts and that the next step is scheduled in the cron on the Server Information page.
