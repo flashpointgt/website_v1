@@ -7,7 +7,7 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 	
 	<head>
-<meta name="google-site-verification" content="RZSn1IJB2zGW3RntHDBBIIQhvAD1oxlAancedy3rcuo" />
+		<meta name="google-site-verification" content="RZSn1IJB2zGW3RntHDBBIIQhvAD1oxlAancedy3rcuo" />
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		

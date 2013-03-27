@@ -1,6 +1,6 @@
 
 /* Instagram photos */
-.front-photo { width: 100px !important;}
+.front-photo { max-width: 100px !important; width: 100px !important;}
 
 
 /* Mentor Grid */
