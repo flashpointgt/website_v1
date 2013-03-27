@@ -34,7 +34,8 @@
 		<![endif]-->
 
 		<!--[if IE 9]>
-			<script src="<?php echo get_template_directory_uri(); ?>/ie9.css"></script>			
+			<link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/ie9.css' type='text/css' media='all' />
+			<link rel='stylesheet' href='http://flashpoint-blog.herokuapp.com/wp-content/themes/flashpoint/ie9.css' type='text/css' media='all' />
 		<![endif]-->
 
 		<!-- html5.js -->
