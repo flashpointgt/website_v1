@@ -43,7 +43,6 @@
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
 
-		<!-- To do: add conditional stylesheets via WP function -->
 		<!--[if IE 9]>
 			<link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/ie9.css' type='text/css' media='all' />
 		<![endif]-->

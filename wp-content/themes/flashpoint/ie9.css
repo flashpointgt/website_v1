@@ -1,9 +1,10 @@
-
 /* Instagram photos */
-.front-photo { max-width: 100px !important; width: 100px !important;}
-
+.front-photo { max-width: 100px !important; width: 100px !important; margin: 5px;}
 
 /* Mentor Grid */
 #mentors-list img { width: 165px; height: 200px }
 
 .mentor-details { width: 155px; }
+
+/* Breadcrubms */
+.breadcrumbs a, .breadcrumbs a:hover, .breadcrumbs a:active, .breadcrumbs a.active { filter: none; }
