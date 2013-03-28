@@ -43,10 +43,6 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-
-		<!--[if IE 9]>
-			<link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/ie9.css' type='text/css' media='all' />
-		<![endif]-->
 		
 		<!-- theme options from options panel -->
 		
