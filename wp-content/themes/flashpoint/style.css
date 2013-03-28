@@ -1246,3 +1246,9 @@ body {
 .ie8 .main {
   background: #fff;
 }
+.ie8 .navbar {
+  height: 20px;
+}
+.ie8 .navber-fixed-top {
+  height: 20px;
+}
