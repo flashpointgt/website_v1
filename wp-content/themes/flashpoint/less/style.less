@@ -45,7 +45,7 @@ Small CSS edits can also be added via the 'CSS Stylesheet Editor' here: /wp-admi
 @import url("custom-content-types.less");
 @import url("responsive.less");
 
-/* IE styles */
+/* IE 8 styles */
 .ie8 {
 
 	.main { background: #fff; }
@@ -61,3 +61,23 @@ Small CSS edits can also be added via the 'CSS Stylesheet Editor' here: /wp-admi
 	}
 }
 
+/* IE 9 styles */
+
+.ie9 {
+
+	.front-photo { max-width: 100px !important; width: 100px !important; margin: 5px;}
+
+	#mentors-list img { width: 165px; height: 200px }
+
+	.mentor-details { width: 155px; }
+
+	.breadcrumbs {
+		
+		a { 
+
+			filter: none;
+			
+			&:hover, &:active, &.active { filter: none; }
+		}
+	}
+}

@@ -1233,7 +1233,7 @@ body {
     display: block;
   }
 }
-/* IE styles */
+/* IE 8 styles */
 .ie8 .main {
   background: #fff;
 }
@@ -1251,4 +1251,25 @@ body {
   width: 165px;
   min-height: 200px;
   height: 200px;
+}
+/* IE 9 styles */
+.ie9 .front-photo {
+  max-width: 100px !important;
+  width: 100px !important;
+  margin: 5px;
+}
+.ie9 #mentors-list img {
+  width: 165px;
+  height: 200px;
+}
+.ie9 .mentor-details {
+  width: 155px;
+}
+.ie9 .breadcrumbs a {
+  filter: none;
+}
+.ie9 .breadcrumbs a:hover,
+.ie9 .breadcrumbs a:active,
+.ie9 .breadcrumbs a.active {
+  filter: none;
 }
