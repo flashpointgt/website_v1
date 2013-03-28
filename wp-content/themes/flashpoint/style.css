@@ -1254,7 +1254,7 @@ body {
   background-color: #7bab73;
 }
 .ie8 .container-fluid .nav-container {
-  margin-top: -40px;
+  margin-top: -40px !important;
 }
 .ie8 #mentors-list img {
   min-width: 165px;
