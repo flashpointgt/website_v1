@@ -1246,12 +1246,11 @@ body {
 .ie8 .main {
   background: #fff;
 }
-.ie8 .navbar,
-.ie8 .navber-inner,
-.ie8 .navber-fixed-top {
-  min-height: 20px;
-  height: 20px;
-  line-height: 10px;
+.ie8 .navbar-inner {
+  height: 40px !important;
+}
+.ie8 .container-fluid .nav-container {
+  margin-top: -40px;
 }
 .ie8 #mentors-list img {
   min-width: 165px;
