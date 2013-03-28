@@ -1248,6 +1248,7 @@ body {
 }
 .ie8 .navbar-inner {
   height: 40px !important;
+  filter: none;
 }
 .ie8 .container-fluid .nav-container {
   margin-top: -40px;
