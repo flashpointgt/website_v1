@@ -1253,7 +1253,7 @@ body {
   filter: none;
   background-color: #7bab73;
 }
-.ie8 .container-fluid .nav-container {
+.ie8 .nav-container {
   margin-top: -40px !important;
 }
 .ie8 #mentors-list img {
