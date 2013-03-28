@@ -1251,7 +1251,6 @@ body {
 .ie8 .navbar-inner {
   height: 40px !important;
   filter: none;
-  background-color: #7bab73;
 }
 .ie8 .nav-container {
   margin-top: -40px !important;
