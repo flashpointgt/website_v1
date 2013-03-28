@@ -17,7 +17,7 @@ Author URI: http://320press.com
 
 /* 
 Please do not edit style.css directly! 
-LESS files can be found in the 'flashpoint/less' directory & can then be compiled to CSS.
+LESS files can be found in the 'flashpoint/less' directory & then be compiled to CSS.
 
 http://lesscss.org/
 http://incident57.com/codekit/
@@ -29,18 +29,14 @@ Small CSS edits can also be added via the 'CSS Stylesheet Editor' here: /wp-admi
 */
 
 
-/* LESS Elements */
+/* LESS Elements - More info at: http://lesselements.com */
+
 @import url("elements.less");
 
-/* Colors */
 @base: #7bab73;
 @neutral: #efefeb;
 @grey: #4a4a4a;
-
-/* Typography*/
 @sans: 'Proxima Nova', Helvetica, Arial, sans-serif;
-
-/* Import Custom LESS */
 @import url("default.less");
 @import url("menu.less");
 @import url("typography.less");
@@ -50,7 +46,6 @@ Small CSS edits can also be added via the 'CSS Stylesheet Editor' here: /wp-admi
 @import url("responsive.less");
 
 /* IE styles */
-
 .ie8 {
 
 	.main { background: #fff; }

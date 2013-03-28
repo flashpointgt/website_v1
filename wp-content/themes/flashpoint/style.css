@@ -14,7 +14,7 @@ Author URI: http://320press.com
 */
 /* 
 Please do not edit style.css directly! 
-LESS files can be found in the 'flashpoint/less' directory & can then be compiled to CSS.
+LESS files can be found in the 'flashpoint/less' directory & then be compiled to CSS.
 
 http://lesscss.org/
 http://incident57.com/codekit/
@@ -24,16 +24,7 @@ and rename 'flashpoint/less' folder to 'flashpoint/less_disabled' or styles may 
 
 Small CSS edits can also be added via the 'CSS Stylesheet Editor' here: /wp-admin/themes.php?page=editcss
 */
-/* LESS Elements */
-/*---------------------------------------------------
-    LESS Elements 0.9
-  ---------------------------------------------------
-    A set of useful LESS mixins
-    More info at: http://lesselements.com
-  ---------------------------------------------------*/
-/* Colors */
-/* Typography*/
-/* Import Custom LESS */
+/* LESS Elements - More info at: http://lesselements.com */
 /* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* For modern browsers */
 .clearfix:before,
