@@ -1249,5 +1249,13 @@ body {
 .ie8 .navbar,
 .ie8 .navber-inner,
 .ie8 .navber-fixed-top {
+  min-height: 20px;
   height: 20px;
+  line-height: 10px;
+}
+.ie8 #mentors-list img {
+  min-width: 165px;
+  width: 165px;
+  min-height: 200px;
+  height: 200px;
 }
