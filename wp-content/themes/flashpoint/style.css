@@ -1242,3 +1242,7 @@ body {
     display: block;
   }
 }
+/* IE styles */
+.ie8 .main {
+  background: #fff;
+}
