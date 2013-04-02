@@ -1233,6 +1233,10 @@ body {
     display: block;
   }
 }
+/* IE 7 styles */
+.ie7 .main {
+  background: #fff;
+}
 /* IE 8 styles */
 .ie8 .main {
   background: #fff;
@@ -1244,6 +1248,10 @@ body {
   filter: none;
   box-shadow: none;
   background: none;
+  border: none;
+}
+.ie8 .navbar-fixed-top .navbar-inner {
+  border: none;
 }
 .ie8 .nav-container {
   margin-top: -40px !important;
