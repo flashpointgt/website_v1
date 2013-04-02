@@ -1242,6 +1242,8 @@ body {
 .ie8 .navbar-inner {
   height: 40px !important;
   filter: none;
+  box-shadow: none;
+  background: none;
 }
 .ie8 .nav-container {
   margin-top: -40px !important;
