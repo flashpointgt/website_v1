@@ -1252,6 +1252,10 @@ body {
   min-height: 200px;
   height: 200px;
 }
+.ie8 ul.grid-list li img {
+  max-width: 165px;
+  width: 165px;
+}
 /* IE 9 styles */
 .ie9 .front-photo {
   max-width: 100px !important;
