@@ -75,6 +75,7 @@ function optionsframework_options() {
 	// If using image radio buttons, define a directory path
 	$imagepath =  get_bloginfo('stylesheet_directory') . '/images/';
 		
+	/*
 	$options = array();
 		
 	$options[] = array( "name" => "Typography",
@@ -172,8 +173,7 @@ function optionsframework_options() {
 						
 	$options[] = array( "name" => "Theme",
 						"type" => "heading");
-						
-	/* 
+						 
 	$options[] = array( "name" => "Bootswatch.com Themes",
 						"desc" => "Use theme from bootswatch.com. Note: This may override other styles set in the theme options panel.",
 						"id" => "showhidden_themes",
@@ -192,11 +192,9 @@ function optionsframework_options() {
 						"type" => "themecheck",
 						"id" => "themecheck"
 						);
-	*/					
 	$options[] = array( "name" => "Other Settings",
 						"type" => "heading");
 
-	/*
 	$options[] = array( "name" => "Slider carousel on homepage",
 						"desc" => "Display the bootstrap slider carousel on homepage page template. This uses the wordpress featured images.",
 						"id" => "showhidden_slideroptions",
@@ -214,21 +212,18 @@ function optionsframework_options() {
 						"desc" => "Default used if no color is selected.",
 						"id" => "hero_unit_bg_color",
 						"std" => "",
-						"type" => "color");
-	*/					
+						"type" => "color");				
 	$options[] = array( "name" => "'Comments are closed' message on pages",
 						"desc" => "Suppress 'Comments are closed' message",
 						"id" => "suppress_comments_message",
 						"std" => "1",
 						"type" => "checkbox");
 						
-	/* 
 	$options[] = array( "name" => "Blog page 'hero' unit",
 						"desc" => "Display blog page hero unit",
 						"id" => "blog_hero",
 						"std" => "1",
 						"type" => "checkbox");
-	*/
 	$options[] = array( "name" => "CSS",
 						"desc" => "Additional CSS",
 						"id" => "wpbs_css",
@@ -237,6 +232,7 @@ function optionsframework_options() {
 									
 	return $options;
 }
+*/
 
 add_action('admin_head', 'wpbs_javascript');
 
