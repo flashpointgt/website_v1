@@ -349,7 +349,7 @@ function of_get_default_values() {
 /**
  * Add Theme Options menu item to Admin Bar.
  */
- 
+/*  
 add_action( 'wp_before_admin_bar_render', 'optionsframework_adminbar' );
 
 function optionsframework_adminbar() {
@@ -363,7 +363,7 @@ function optionsframework_adminbar() {
 		'href' => admin_url( 'themes.php?page=options-framework' )
   ));
 }
-
+*/
 if ( ! function_exists( 'of_get_option' ) ) {
 
 	/**
