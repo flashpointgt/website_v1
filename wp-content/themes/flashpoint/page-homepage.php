@@ -10,6 +10,7 @@ Template Name: Homepage
 			
 				<div id="main" class="span12 clearfix" role="main">
 
+					<!-- Remove built-in slider for custom implementation
 					<?php
 
 					$use_carousel = of_get_option('showhidden_slideroptions');
@@ -19,7 +20,7 @@ Template Name: Homepage
 
 					<div id="myCarousel" class="carousel">
 
-					    <!-- Carousel items -->
+					    
 					    <div class="carousel-inner">
 
 					    	<?php
@@ -61,12 +62,11 @@ Template Name: Homepage
 
 					    </div>
 
-					    <!-- Carousel nav -->
 					    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 					    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 				    </div>
 
-				    <?php } // ends the if use carousel statement ?>
+				    <?php } // ends the if use carousel statement ?> -->
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

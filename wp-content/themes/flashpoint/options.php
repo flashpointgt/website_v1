@@ -195,6 +195,7 @@ function optionsframework_options() {
 	$options[] = array( "name" => "Other Settings",
 						"type" => "heading");
 
+	/*
 	$options[] = array( "name" => "Slider carousel on homepage",
 						"desc" => "Display the bootstrap slider carousel on homepage page template. This uses the wordpress featured images.",
 						"id" => "showhidden_slideroptions",
@@ -213,7 +214,7 @@ function optionsframework_options() {
 						"id" => "hero_unit_bg_color",
 						"std" => "",
 						"type" => "color");
-						
+	*/					
 	$options[] = array( "name" => "'Comments are closed' message on pages",
 						"desc" => "Suppress 'Comments are closed' message",
 						"id" => "suppress_comments_message",
