@@ -173,6 +173,7 @@ function optionsframework_options() {
 	$options[] = array( "name" => "Theme",
 						"type" => "heading");
 						
+	/* 
 	$options[] = array( "name" => "Bootswatch.com Themes",
 						"desc" => "Use theme from bootswatch.com. Note: This may override other styles set in the theme options panel.",
 						"id" => "showhidden_themes",
@@ -191,7 +192,7 @@ function optionsframework_options() {
 						"type" => "themecheck",
 						"id" => "themecheck"
 						);
-						
+	*/					
 	$options[] = array( "name" => "Other Settings",
 						"type" => "heading");
 
@@ -221,12 +222,13 @@ function optionsframework_options() {
 						"std" => "1",
 						"type" => "checkbox");
 						
+	/* 
 	$options[] = array( "name" => "Blog page 'hero' unit",
 						"desc" => "Display blog page hero unit",
 						"id" => "blog_hero",
 						"std" => "1",
 						"type" => "checkbox");
-	
+	*/
 	$options[] = array( "name" => "CSS",
 						"desc" => "Additional CSS",
 						"id" => "wpbs_css",
