@@ -77,7 +77,6 @@ function optionsframework_options() {
 		
 	$options = array();
 		
-	/*
 	$options[] = array( "name" => "Typography",
 						"type" => "heading");
 						
@@ -230,7 +229,7 @@ function optionsframework_options() {
 						"std" => "",
 						"type" => "textarea");
 									
-	return $options; */
+	return $options; 
 }
 
 add_action('admin_head', 'wpbs_javascript');
