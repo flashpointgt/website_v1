@@ -14,7 +14,7 @@ Template Name: Homepage w/ slider
 		            </ol>
 		            <div class="carousel-inner">
 		            	<div class="item active">
-		                	<img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-home2.png" alt="Better Startups Faster.">
+		                	<img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-home_1.png" alt="Better Startups Faster.">
 		              	</div>
 		              	<div class="item">
 		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2013.png" alt="Spring 2013 Flashpoint Companies"></a>
