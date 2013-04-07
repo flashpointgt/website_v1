@@ -19,12 +19,14 @@ Template Name: Homepage w/ slider
 		              	<div class="item">
 		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2013.png" alt="Spring 2013 Flashpoint Companies"></a>
 		                	<div class="carousel-caption">
-		                  	<h4>Spring 2013 Flashpoint Companies</h4>
+		                  		<h4>Spring 2013 Flashpoint Companies</h4>
 		                	</div>
 		              	</div>		              	
 		              	<div class="item">
 		                	<a href="/summer-2012/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2012.png" alt="Summer 2012 Flashpoint Companies"></a>
-		              		<h4>Summer 2012 Flashpoint Companies</h4>
+		              		<div class="carousel-caption">
+		              			<h4>Summer 2012 Flashpoint Companies</h4>
+		              		</div>
 		              	</div>
 		            </div>
 		            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
