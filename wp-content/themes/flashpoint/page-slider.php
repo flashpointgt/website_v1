@@ -14,7 +14,7 @@ Template Name: Homepage w/ slider
 		            	<li data-target="#myCarousel" data-slide-to="2" class=""></li>
 		            </ol>
 		            <div class="carousel-inner">
-		            	<div class="item">
+		            	<div class="item active">
 		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-spring2013.jpg" alt="2013 Flashpoint Companies"></a>
 		                	<!-- <div class="carousel-caption">
 		                  	<h4>First Thumbnail label</h4>
@@ -24,7 +24,7 @@ Template Name: Homepage w/ slider
 		              	<div class="item">
 		                	<img src="http://dummyimage.com/980x400/000/fff" alt="">
 		              	</div>
-		              	<div class="item active">
+		              	<div class="item">
 		                	<img src="http://dummyimage.com/980x400/000/fff" alt="">
 		              	</div>
 		            </div>
