@@ -957,13 +957,16 @@ ul.grid-list {
   list-style: none;
   position: relative;
 }
+ul.grid-list img {
+  max-width: 165px;
+}
 ul.grid-list li {
   display: inline-block;
   vertical-align: top;
   max-width: 200px;
   height: 150px;
 }
-ul.grid-list li a {
+ul.grid-list a {
   padding: 1em 0;
   margin: 1em;
   float: left;
@@ -1262,7 +1265,7 @@ body {
   min-height: 200px;
   height: 200px;
 }
-.ie8 ul.grid-list li img {
+.ie8 ul.grid-list img {
   max-width: 165px;
   width: 165px;
 }
