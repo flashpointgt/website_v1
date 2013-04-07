@@ -1236,6 +1236,13 @@ body {
     display: block;
   }
 }
+/* Homepage Slider */
+ol.carousel-indicators {
+  list-style: none;
+}
+.carousel .item > img {
+  margin: 0 auto;
+}
 /* IE 7 styles */
 .ie7 .main {
   background: #fff;
