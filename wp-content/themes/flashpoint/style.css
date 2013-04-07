@@ -1243,6 +1243,9 @@ ol.carousel-indicators {
 .carousel .item > img {
   margin: 0 auto;
 }
+.carousel-control {
+  top: 48%;
+}
 /* IE 7 styles */
 .ie7 .main {
   background: #fff;
