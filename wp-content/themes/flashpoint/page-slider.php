@@ -15,7 +15,7 @@ Template Name: Homepage w/ slider
 		            </ol>
 		            <div class="carousel-inner">
 		            	<div class="item">
-		                	<img src="http://dummyimage.com/980x400/000/fff" alt="">
+		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-spring2013.jpg" alt="2013 Flashpoint Companies"></a>
 		                	<!-- <div class="carousel-caption">
 		                  	<h4>First Thumbnail label</h4>
 		                  	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
