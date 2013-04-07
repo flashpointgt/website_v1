@@ -14,17 +14,21 @@ Template Name: Homepage w/ slider
 		            </ol>
 		            <div class="carousel-inner">
 		            	<div class="item active">
-		                	<img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner.png" alt="2013 Flashpoint Companies">
-		                	<!-- <div class="carousel-caption">
-		                  	<h4>First Thumbnail label</h4>
-		                  	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-		                	</div> -->
+		                	<img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-home.png" alt="Better Startups Faster.">
+		                	<div class="carousel-caption">
+		                  	<h4>Better Startups Faster.</h4>
+		                  	<p>Better Startups Faster.</p>
+		                	</div>
 		              	</div>
 		              	<div class="item">
-		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-spring2013.png" alt=""></a>
+		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2013.png" alt="Spring 2013 Flashpoint Companies"></a>
+		                	<div class="carousel-caption">
+		                  	<h4>Spring 2013 Flashpoint Companies</h4>
+		                	</div>
 		              	</div>		              	
 		              	<div class="item">
-		                	<a href="/summer-2012/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-summer2012.png" alt=""></a>
+		                	<a href="/summer-2012/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2012.png" alt="Summer 2012 Flashpoint Companies"></a>
+		              		<p>Summer 2012 Flashpoint Companies</p>
 		              	</div>
 		            </div>
 		            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
