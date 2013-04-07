@@ -32,7 +32,7 @@
 		<!--[if lt IE 9]>
 			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
 		<![endif]-->
-		
+
 		<!-- html5.js -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,9 +43,8 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-		
+
 		<!-- theme options from options panel -->
-		
 		<?php get_wpbs_theme_options(); ?>
 
 		<?php 
@@ -139,5 +138,3 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" /></a>
 		</div>
 		<div class="container-fluid main">
-
-		

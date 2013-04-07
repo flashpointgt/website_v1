@@ -4,7 +4,7 @@ Template Name: Homepage w/ slider
 */
 ?>
 
-<?php get_header('slider'); ?>
+<?php get_header(); ?>
 			
 			<div id="content" class="clearfix row-fluid">
 				<div id="myCarousel" class="carousel slide">
@@ -14,14 +14,17 @@ Template Name: Homepage w/ slider
 		            </ol>
 		            <div class="carousel-inner">
 		            	<div class="item active">
-		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-spring2013_0.jpg" alt="2013 Flashpoint Companies"></a>
+		                	<img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner.png" alt="2013 Flashpoint Companies">
 		                	<!-- <div class="carousel-caption">
 		                  	<h4>First Thumbnail label</h4>
 		                  	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 		                	</div> -->
 		              	</div>
 		              	<div class="item">
-		                	<a href="/summer-2012/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-summer2012.jpg" alt=""></a>
+		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-spring2013.png" alt=""></a>
+		              	</div>		              	
+		              	<div class="item">
+		                	<a href="/summer-2012/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-summer2012.png" alt=""></a>
 		              	</div>
 		            </div>
 		            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
