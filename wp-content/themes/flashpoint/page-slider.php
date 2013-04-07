@@ -9,9 +9,9 @@ Template Name: Homepage w/ slider
 			<div id="content" class="clearfix row-fluid">
 				<div id="myCarousel" class="carousel slide">
 		        	<ol class="carousel-indicators">
-		            	<li data-target="#myCarousel" data-slide-to="0" class=""></li>
+		            	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		            	<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-		            	<li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+		            	<li data-target="#myCarousel" data-slide-to="2" class=""></li>
 		            </ol>
 		            <div class="carousel-inner">
 		            	<div class="item">
