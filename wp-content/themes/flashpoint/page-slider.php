@@ -18,9 +18,9 @@ Template Name: Homepage w/ slider
 		              	</div>
 		              	<div class="item">
 		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2013.png" alt="Spring 2013 Flashpoint Companies"></a>
-		                	<div class="carousel-caption">
+		                	<!-- <div class="carousel-caption">
 		                  		<h2>Spring 2013 Flashpoint Companies</h2>
-		                	</div> 
+		                	</div> --> 
 		              	</div>		              	
 		              	<div class="item">
 		                	<a href="/summer-2012/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2012.png" alt="Summer 2012 Flashpoint Companies"></a>
