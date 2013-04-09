@@ -534,6 +534,7 @@ add_action('wp_enqueue_scripts', 'theme_js');
 function get_wpbs_theme_options(){
   $theme_options_styles = '';
     
+      /*
       $heading_typography = of_get_option('heading_typography');
       if ( $heading_typography['face'] != 'Default' ) {
         $theme_options_styles .= '
@@ -659,7 +660,7 @@ function get_wpbs_theme_options(){
           background-color: '. $hero_unit_bg_color . ';
         }';
       }
-      
+      */
       $suppress_comments_message = of_get_option('suppress_comments_message');
       if ($suppress_comments_message){
         $theme_options_styles .= '
