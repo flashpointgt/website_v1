@@ -14,16 +14,16 @@ Template Name: Homepage w/ slider
 		            </ol>
 		            <div class="carousel-inner">
 		            	<div class="item active">
-		                	<img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/banner-home_1.png" alt="Better Startups Faster.">
+		                	<img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/home-slide.png" alt="Better Startups Faster.">
 		              	</div>
 		              	<div class="item">
-		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2013.png" alt="Spring 2013 Flashpoint Companies"></a>
+		                	<a href="/spring-2013/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2013-slide.png" alt="Spring 2013 Flashpoint Companies"></a>
 		                	<!-- <div class="carousel-caption">
 		                  		<h2>Spring 2013 Flashpoint Companies</h2>
 		                	</div> --> 
 		              	</div>		              	
 		              	<div class="item">
-		                	<a href="/summer-2012/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2012.png" alt="Summer 2012 Flashpoint Companies"></a>
+		                	<a href="/summer-2012/"><img src="http://flashpoint-website-images.s3.amazonaws.com/2013/04/2012-slide.png" alt="Summer 2012 Flashpoint Companies"></a>
 		              		<!-- <div class="carousel-caption">
 		              			<h4>Summer 2012 Flashpoint Companies</h4>
 		              		</div> -->
