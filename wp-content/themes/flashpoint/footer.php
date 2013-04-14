@@ -19,7 +19,7 @@
 			
 					<p class="attribution">
 						<span>&copy; <?php echo date('Y'); ?> | <?php bloginfo('name'); ?> on <a href="https://www.facebook.com/FlashpointGT">Facebook</a> &amp; <a href="https://twitter.com/FlashpointGT">Twitter</a> | <a href="about/contact">Contact Us</a></span>
-						<span class="pull-right">website by <a href="http://twitter.com/propercursive" id="credit320" title="propercursive">@propercursive</a></span>
+						<!-- <span class="pull-right">website by <a href="http://twitter.com/propercursive" id="credit320" title="propercursive">@propercursive</a></span> -->
 					</p>
 					
 				</div> <!-- end #inner-footer -->
