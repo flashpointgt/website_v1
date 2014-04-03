@@ -3,7 +3,7 @@
 Plugin Name: Authors Widget
 Plugin URI: http://blog.fleischer.hu/wordpress/authors/
 Description: Authors Widget shows the list or cloud of the authors, with the number of posts, link to RSS feed next to their name, avatar. It is useful in a multi-author blog, where you want to have the list in the sidemenu.
-Version: 2.2.2
+Version: 2.4.2
 Author: Gavriel Fleischer
 Author URI: http://blog.fleischer.hu/author/gavriel/
 */
@@ -22,6 +22,10 @@ if ( function_exists('register_sidebar_widget') ) :
 		$author->last_name = $author_data->last_name;
 	}
 
+	function widget_authors_sort_by_id($a, $b) {
+		return 0 + $a->ID - $b->ID;
+	}
+
 	function widget_authors_sort_by_first_name($a, $b) {
 		$cmp_first_name = strcmp($a->first_name, $b->first_name);
 		return $cmp_first_name !== 0 ? $cmp_first_name : strcmp($a->last_name, $b->last_name);
@@ -32,25 +36,56 @@ if ( function_exists('register_sidebar_widget') ) :
 		return $cmp_last_name !== 0 ? $cmp_last_name : strcmp($a->first_name, $b->first_name);
 	}
 
+	function widget_authors_sort_by_posts($a, $b) {
+		$matches = array();
+		preg_match('#\(([0-9]*)\)</li>#', $a, $matches);
+		$aC = is_array($matches) && count($matches) >= 2 ? intval($matches[1]) : 0;
+		preg_match('#\(([0-9]*)\)</li>#', $b, $matches);
+		$bC = is_array($matches) && count($matches) >= 2 ? intval($matches[1]) : 0;
+		return $aC < $bC ? 1 : -1;
+	}
+
 	function widget_authors_sort_by($orderby, &$authors) {
-		if ('first_name' != $orderby && 'last_name' != $orderby) {
-			return;
-		}
-		array_walk($authors, widget_authors_add_last_name);
+#		if ('first_name' != $orderby && 'last_name' != $orderby) {
+#			return;
+#		}
 		switch ($orderby) {
 		case 'first_name':
+			array_walk($authors, widget_authors_add_last_name);
 			usort($authors, widget_authors_sort_by_first_name);
 			break;
 		case 'last_name':
+			array_walk($authors, widget_authors_add_last_name);
 			usort($authors, widget_authors_sort_by_last_name);
 			break;
+		case 'id':
+			usort($authors, widget_authors_sort_by_id);
+			break;
+#		case 'posts':
+#			usort($authors, widget_authors_sort_by_posts);
+#			break;
 		}
+	}
+
+	function widget_authors_order_by($args) {
+		$count = $args['optioncount'];
+		$args['optioncount'] = 1;
+		$arr = array_slice(explode('<li>', widget_authors_list_authors($args)), 1);
+		switch ($args['orderby']) {
+			case 'posts': usort($arr, 'widget_authors_sort_by_posts');break;
+			default:
+		}
+		if ('0' == $count) {
+			array_walk($arr, 'widget_authors_format', 'no-count');
+		}
+		if ($args['limit']) {
+		    $arr = array_slice($arr, 0, $args['limit']);
+		}
+		return $arr;
 	}
 
 	if ( function_exists('seo_tag_cloud_generate') ) :
 	function widget_authors_cloud($args = '') {
-		global $wpdb;
-
 		$defaults = array(
 			'optioncount' => false, 'exclude_admin' => true,
 			'show_fullname' => false, 'hide_empty' => true,
@@ -66,26 +101,16 @@ if ( function_exists('register_sidebar_widget') ) :
 
 		$return = '';
 
-		if (empty($include)) {
-			$include_sql = '';
-			$exclude_sql = ' AND ID NOT IN (' . $exclude . ') AND user_login NOT IN (' . $exclude . ')';
-		} else {
-			$include_sql = ' AND (ID IN (' . $include . ') OR user_login IN (' . $include . '))';
-			$exclude_sql = '';
-		}
-		$authors = $wpdb->get_results('SELECT ID, user_nicename, display_name FROM ' . $wpdb->users . ' WHERE 0=0' . ($exclude_admin ? ' AND ID <> 1' : '') . $exclude_sql . $include_sql . ' ORDER BY display_name');
-
-		$author_count = array();
-		foreach ((array) $wpdb->get_results('SELECT DISTINCT post_author, COUNT(ID) AS count FROM '.$wpdb->posts.' WHERE post_type = "post" AND ' . get_private_posts_cap_sql( 'post' ) . ' GROUP BY post_author') as $row) {
-			$author_count[$row->post_author] = $row->count;
-		}
-
+		$authors = widget_authors_get_authors( $include, $exclude );
+		$author_count = widget_authors_count_authors ( $authors );
 		widget_authors_sort_by($orderby, $authors);
 
 		foreach ( (array) $authors as $key => $author ) {
 			$posts = (isset($author_count[$author->ID])) ? $author_count[$author->ID] : 0;
 			if ( $posts != 0 || !$hide_empty ) {
 				$author = get_userdata( $author->ID );
+				if ($exclude_admin && 10 == $author->user_level)
+					continue;
 				$name = $author->display_name;
 				if ( $show_fullname && ($author->first_name != '' && $author->last_name != '') )
 					$name = $author->first_name . ' ' . $author->last_name;
@@ -111,23 +136,6 @@ if ( function_exists('register_sidebar_widget') ) :
 		echo $return;
 	}
 	endif;
-
-	function widget_authors_order_by($args) {
-		$count = $args['optioncount'];
-		$args['optioncount'] = 1;
-		$arr = array_slice(explode('<li>', widget_authors_list_authors($args)), 1);
-		switch ($args['orderby']) {
-			case 'posts': usort($arr, 'widget_authors_sort_by_posts');break;
-			default:
-		}
-		if ('0' == $count) {
-			array_walk($arr, 'widget_authors_format', 'no-count');
-		}
-		if ($args['limit']) {
-		    $arr = array_slice($arr, 0, $args['limit']);
-		}
-		return $arr;
-	}
 
 	function widget_authors_format(&$val, $i, $format) {
 		switch ($format) {
@@ -181,8 +189,6 @@ if ( function_exists('register_sidebar_widget') ) :
  * @return null|string The output, if echo is set to false.
  */
 function widget_authors_list_authors($args = '') {
-	global $wpdb;
-
 	$defaults = array(
 		'optioncount' => false, 'exclude_admin' => true,
 		'show_fullname' => false, 'hide_empty' => true,
@@ -198,21 +204,8 @@ function widget_authors_list_authors($args = '') {
 	extract($r, EXTR_SKIP);
 	$return = '';
 
-	if (empty($include)) {
-		$include_sql = '';
-		$exclude_sql = ' AND ID NOT IN (' . $exclude . ') AND user_login NOT IN (' . $exclude . ')';
-	} else {
-		$include_sql = ' AND (ID IN (' . $include . ') OR user_login IN (' . $include . '))';
-		$exclude_sql = '';
-	}
-	/** @todo Move select to get_authors(). */
-	$authors = $wpdb->get_results('SELECT ID, user_nicename FROM ' . $wpdb->users . ' WHERE 0=0' . ($exclude_admin ? ' AND ID <> 1' : '') . $exclude_sql . $include_sql . ' ORDER BY display_name');
-
-	$author_count = array();
-	foreach ((array) $wpdb->get_results('SELECT DISTINCT post_author, COUNT(ID) AS count FROM ' . $wpdb->posts . ' WHERE post_type = "post" AND ' . get_private_posts_cap_sql('post') . ' GROUP BY post_author') as $row) {
-		$author_count[$row->post_author] = $row->count;
-	}
-
+	$authors = widget_authors_get_authors( $include, $exclude);
+	$author_count = widget_authors_count_authors ( $authors );
 	widget_authors_sort_by($orderby, $authors);
 
 	foreach ( (array) $authors as $author ) {
@@ -335,7 +328,11 @@ function widget_authors_list_authors($args = '') {
 					$list_args['feed'] = 'RSS';
 					$list_args['feed_image'] = '';
 				}
-				if ('cloud' == $format && function_exists('seo_tag_cloud_generate') ) {
+				if ('cloud' == $format && function_exists('seo_tag_cloud_generate')) {
+					widget_authors_cloud($list_args);
+				}
+				elseif ('ball' == $format && function_exists('seo_tag_cloud_generate')) {
+					$list_args['format'] = 'ball';
 					widget_authors_cloud($list_args);
 				}
 				elseif ('dropdown' == $format) {
@@ -350,15 +347,6 @@ function widget_authors_list_authors($args = '') {
 			<?php if ($options['show_credit'] == 1) printf('<span class="credit">'.__('Powered by %s','authors').'</span>', '<a href="http://blog.fleischer.hu/wordpress/authors/" title="'.__('Authors Widget Plugin for Wordpress','authors').'">'.__('Authors Widget','authors').'</a>');?>
 		<?php echo $after_widget; ?>
 	<?php
-	}
-
-	function widget_authors_sort_by_posts($a, $b) {
-		$matches = array();
-		preg_match('#\(([0-9]*)\)</li>#', $a, $matches);
-		$aC = is_array($matches) && count($matches) >= 2 ? intval($matches[1]) : 0;
-		preg_match('#\(([0-9]*)\)</li>#', $b, $matches);
-		$bC = is_array($matches) && count($matches) >= 2 ? intval($matches[1]) : 0;
-		return $aC < $bC ? 1 : -1;
 	}
 	
 	function widget_authors_style() {
@@ -464,6 +452,7 @@ function widget_authors_list_authors($args = '') {
 			<label for="authors-format-<?php echo $number; ?>-list"><input type="radio" class="radio" id="authors-format-<?php echo $number; ?>-list" name="widget-authors[<?php echo $number; ?>][format]" value="list"<?php echo 'list' == $format || '' == $format ? ' checked="checked"' : '' ?> /> <?php _e('List','authors') ?></label>
 		<?php if ( function_exists('seo_tag_cloud_generate') ) : ?>
 			<label for="authors-format-<?php echo $number; ?>-cloud"><input type="radio" class="radio" id="authors-format-<?php echo $number; ?>-cloud" name="widget-authors[<?php echo $number; ?>][format]" value="cloud"<?php echo 'cloud' == $format ? ' checked="checked"' : '' ?> /> <?php _e('Cloud','authors') ?></label>
+			<label for="authors-format-<?php echo $number; ?>-ball"><input type="radio" class="radio" id="authors-format-<?php echo $number; ?>-ball" name="widget-authors[<?php echo $number; ?>][format]" value="ball"<?php echo 'ball' == $format ? ' checked="checked"' : '' ?> /> <?php _e('Ball','authors') ?></label>
 		<?php endif; ?>
 			<label for="authors-format-<?php echo $number; ?>-dropdown"><input type="radio" class="radio" id="authors-format-<?php echo $number; ?>-dropdown" name="widget-authors[<?php echo $number; ?>][format]" value="dropdown"<?php echo 'dropdown' == $format ? ' checked="checked"' : '' ?> /> <?php _e('Dropdown','authors') ?></label>
 		</p>
@@ -471,8 +460,9 @@ function widget_authors_list_authors($args = '') {
 			<?php _e('Order by','authors') ?>:<br />
 			<label for="authors-order-<?php echo $number; ?>-name"><input type="radio" class="radio" id="authors-order-<?php echo $number; ?>-name" name="widget-authors[<?php echo $number; ?>][order]" value="name"<?php echo 'name' == $order || '' == $order ? ' checked="checked"' : '' ?> />&nbsp;<?php _e('Display name','authors') ?></label>
 			<label for="authors-order-<?php echo $number; ?>-firstname"><input type="radio" class="radio" id="authors-order-<?php echo $number; ?>-firstname" name="widget-authors[<?php echo $number; ?>][order]" value="first_name"<?php echo 'first_name' == $order || '' == $order ? ' checked="checked"' : '' ?> />&nbsp;<?php _e('First name','authors') ?></label>
-			<label for="authors-order-<?php echo $number; ?>-lastname"><input type="radio" class="radio" id="authors-order-<?php echo $number; ?>-lastname" name="widget-authors[<?php echo $number; ?>][order]" value="last_name"<?php echo 'last_name' == $order || '' == $order ? ' checked="checked"' : '' ?> />&nbsp;<?php _e('Last name','authors') ?></label>
+			<label for="authors-order-<?php echo $number; ?>-lastname"><input type="radio" class="radio" id="authors-order-<?php echo $number; ?>-lastname" name="widget-authors[<?php echo $number; ?>][order]" value="last_name"<?php echo 'last_name' == $order ? ' checked="checked"' : '' ?> />&nbsp;<?php _e('Last name','authors') ?></label>
 			<label for="authors-order-<?php echo $number; ?>-posts"><input type="radio" class="radio" id="authors-order-<?php echo $number; ?>-posts" name="widget-authors[<?php echo $number; ?>][order]" value="posts"<?php echo 'posts' == $order ? ' checked="checked"' : '' ?> />&nbsp;<?php _e('Post count','authors') ?></label>
+			<label for="authors-order-<?php echo $number; ?>-id"><input type="radio" class="radio" id="authors-order-<?php echo $number; ?>-id" name="widget-authors[<?php echo $number; ?>][order]" value="id"<?php echo 'id' == $order ? ' checked="checked"' : '' ?> />&nbsp;<?php _e('ID','authors') ?></label>
 		</p>
 		<p><label for="authors-limit-<?php echo $number; ?>"><?php _e('Number of authors to show', 'authors') ?>: <input type="text" class="widefat" style="width: 25px; text-align: center;" id="authors-limit-<?php echo $number; ?>" name="widget-authors[<?php echo $number; ?>][limit]" value="<?php echo $limit ?>" /></label></p>
 		<p><label for="authors-show-fullname-<?php echo $number; ?>"><input id="authors-show-fullname-<?php echo $number; ?>" name="widget-authors[<?php echo $number; ?>][show_fullname]" type="checkbox" <?php checked( $show_fullname, true ); ?> class="checkbox" /> <?php _e('Show full name','authors'); ?></label></p>
@@ -520,6 +510,46 @@ function widget_authors_list_authors($args = '') {
 			}
 
 		return $newoptions;
+	}
+	function widget_authors_get_authors( $include = array(), $exclude = array()) {
+		if ( !empty( $include ) ) {
+			$include = explode( ',', $include);
+			foreach ( $include as $key => $val ) {
+				if ( !is_int( $val ) ) {
+					$user = get_user_by( 'login', $val );
+					$include[$key] = $user->ID;
+				}
+			}
+		}
+		if ( !empty( $exclude ) ) {
+			$exclude = explode( ',', $exclude);
+			foreach ( $exclude as $key => $val ) {
+				if ( !is_int( $val ) ) {
+					$val = trim($val, '"\'');
+					$user = get_user_by( 'login', $val );
+					$exclude[$key] = $user->ID;
+				}
+			}
+		}
+		$user_args = array(
+			'fields' => array( 'ID', 'user_nicename', 'display_name' ),
+			'who' => 'all',
+			'orderby' => 'display_name',
+			'include' => $include,
+			'exclude' => $exclude
+		);
+		$wp_user_search = new WP_User_Query( $user_args );
+		$authors = $wp_user_search->get_results();
+		return $authors;
+	}
+
+	function widget_authors_count_authors( $authors ) {
+		$author_ids = array();
+		foreach( $authors as $author) {
+			$author_ids[] = $author->ID;
+		}
+		$author_count = count_many_users_posts($author_ids);
+		return $author_count;
 	}
 
 	if ( !$options = get_option( 'widget_authors' ) )
